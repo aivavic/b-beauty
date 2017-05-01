@@ -1,0 +1,14 @@
+#gallery{width:100%;overflow:hidden;position:relative;}
+#gallery .item{float:left;padding:5px;}
+#gallery .tarea{position:absolute;top:10px;left:25%;top:25%;height:50%;width:50%;display:none;padding:5px;background:#ccc;}
+#gallery .tarea textarea{height:100%;width:100%;border:0;}
+#gallery .item .img{height:150px;width:200px;vertical-align:middle;line-height:200px;text-align:center;border:2px solid #ccc;overflow:hidden;}
+#gallery .item .img img{height:150px;}
+#gallery .item .controls{position:relative;display:inline-block;height:20px;width:105px;}
+#gallery .item .controls input{height:19px;border:1px solid #ccc;width:120px;display:block;}
+
+
+#gallery .del{display:block;position:absolute;top:0;right:-50px;height:17px;width:17px;background:url('/admin/drawer/drawer_oc/adminfiles/b_drop.png');cursor:pointer;}
+#gallery .edit{display:block;position:absolute;top:0;right:25px;height:20px;width:20px;background:url('/admin/drawer/drawer_oc/adminfiles/b_edit.png');cursor:pointer;}
+.uploadbut{float:left;}
+.updategal{height:30px;width:120px;background:url('/admin/drawer/drawer_oc/adminfiles/update.gif');margin:0 0 20px 130px; display:block;}

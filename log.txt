@@ -1,0 +1,180 @@
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383148341)
+ITEM=Z:\tmp\php2F9D.tmp
+Array
+(
+    [0] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider
+            [w] => 300
+            [h] => 200
+            [mode] => same
+            [ext] => jpg
+        )
+
+    [1] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider_big
+            [w] => 600
+            [h] => 400
+            [mode] => same
+            [ext] => jpg
+            [watermarkfile] => images/water.png
+            [watermarkpos] => center
+        )
+
+)
+
+OK
+NEWNAME=Z:/home/beb/www/fotos/mainslider51.jpgOK
+NEWNAME=Z:/home/beb/www/fotos/mainslider_big51.jpg
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383148719)
+ITEM=/tmp/php8Tv4H5
+
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383148727)
+ITEM=/tmp/phpJ6u9Yx
+
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383154593)
+ITEM=/tmp/phpex9nTV
+
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383154692)
+ITEM=/tmp/phpEC976N
+
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383154909)
+ITEM=/tmp/phpol1DFM
+
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383155134)
+ITEM=/tmp/phpQxgQCd
+SIZE=Array
+G=
+RG=[{\"picprefix\":\"fotos\\/mainslider\",\"w\":300,\"h\":200,\"mode\":\"same\",\"ext\":\"jpg\"},{\"picprefix\":\"fotos\\/mainslider_big\",\"w\":600,\"h\":400,\"mode\":\"same\",\"ext\":\"jpg\",\"watermarkfile\":\"images\\/water.png\",\"watermarkpos\":\"center\"}]
+
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383156052)
+ITEM=/tmp/phpxgjOa2
+SIZE=Array
+G=Array
+(
+    [0] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider
+            [w] => 300
+            [h] => 200
+            [mode] => same
+            [ext] => jpg
+        )
+
+    [1] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider_big
+            [w] => 600
+            [h] => 400
+            [mode] => same
+            [ext] => jpg
+            [watermarkfile] => images/water.png
+            [watermarkpos] => center
+        )
+
+)
+
+RG=[{\"picprefix\":\"fotos\\/mainslider\",\"w\":300,\"h\":200,\"mode\":\"same\",\"ext\":\"jpg\"},{\"picprefix\":\"fotos\\/mainslider_big\",\"w\":600,\"h\":400,\"mode\":\"same\",\"ext\":\"jpg\",\"watermarkfile\":\"images\\/water.png\",\"watermarkpos\":\"center\"}]
+OK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider57.jpgOK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider_big57.jpg
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383156110)
+ITEM=/tmp/php8OPH2w
+SIZE=Array
+G=Array
+(
+    [0] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider
+            [w] => 300
+            [h] => 200
+            [mode] => same
+            [ext] => jpg
+        )
+
+    [1] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider_big
+            [w] => 600
+            [h] => 400
+            [mode] => same
+            [ext] => jpg
+            [watermarkfile] => images/water.png
+            [watermarkpos] => center
+        )
+
+)
+
+RG=[{\"picprefix\":\"fotos\\/mainslider\",\"w\":300,\"h\":200,\"mode\":\"same\",\"ext\":\"jpg\"},{\"picprefix\":\"fotos\\/mainslider_big\",\"w\":600,\"h\":400,\"mode\":\"same\",\"ext\":\"jpg\",\"watermarkfile\":\"images\\/water.png\",\"watermarkpos\":\"center\"}]
+OK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider58.jpgOK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider_big58.jpg
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383156166)
+ITEM=/tmp/phpPHdFdR
+SIZE=Array
+G=Array
+(
+    [0] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider
+            [w] => 300
+            [h] => 200
+            [mode] => same
+            [ext] => jpg
+        )
+
+    [1] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider_big
+            [w] => 600
+            [h] => 400
+            [mode] => same
+            [ext] => jpg
+            [watermarkfile] => images/water.png
+            [watermarkpos] => center
+        )
+
+)
+
+RG=[{\"picprefix\":\"fotos\\/mainslider\",\"w\":300,\"h\":200,\"mode\":\"same\",\"ext\":\"jpg\"},{\"picprefix\":\"fotos\\/mainslider_big\",\"w\":600,\"h\":400,\"mode\":\"same\",\"ext\":\"jpg\",\"watermarkfile\":\"images\\/water.png\",\"watermarkpos\":\"center\"}]
+OK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider59.jpgOK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider_big59.jpg
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383156384)
+ITEM=/tmp/phplTpQTR
+SIZE=Array
+G=Array
+(
+    [0] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider
+            [w] => 300
+            [h] => 200
+            [mode] => same
+            [ext] => jpg
+        )
+
+    [1] => stdClass Object
+        (
+            [picprefix] => fotos/mainslider_big
+            [w] => 600
+            [h] => 400
+            [mode] => same
+            [ext] => jpg
+            [watermarkfile] => images/water.png
+            [watermarkpos] => center
+        )
+
+)
+
+RG=[{\"picprefix\":\"fotos\\/mainslider\",\"w\":300,\"h\":200,\"mode\":\"same\",\"ext\":\"jpg\"},{\"picprefix\":\"fotos\\/mainslider_big\",\"w\":600,\"h\":400,\"mode\":\"same\",\"ext\":\"jpg\",\"watermarkfile\":\"images\\/water.png\",\"watermarkpos\":\"center\"}]
+OK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider60.jpgOK
+NEWNAME=/home/zendosor/domains/zendos.org/public_html/test298/fotos/mainslider_big60.jpg

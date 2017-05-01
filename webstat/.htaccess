@@ -1,0 +1,6 @@
+<Limit GET POST>
+	require valid-user
+</Limit>
+AuthType Basic
+AuthName "webstat"
+AuthUserFile /home/h57687/data/etc/b-beauty.com.ua.stat.passwd

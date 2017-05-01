@@ -1,0 +1,4 @@
+sdgsdgfsfgsdgsdgfsfgsdgsdgfsfgsdgsdgfsfgtestetstetst111111111testetstetst111111111.....sdfgsdfgsdfgsdfg.....sdfgsdfgsdfgsdfg.....sdfgsdfgsdfgsdfgSQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383147847)
+SQL=INSERT INTO fotor (`reportid`,`hide`,`newstype`,`date`) VALUES (1,0,7,1383147964)
+ITEM=/tmp/phpkQFBK0
+OK

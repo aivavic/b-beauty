@@ -1,0 +1,57 @@
+#AddDefaultCharset WINDOWS-1251 
+AddDefaultCharset UTF-8
+
+# -FrontPage-
+IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+
+<Limit GET POST>
+order deny,allow
+deny from all
+allow from all
+</Limit>
+<Limit PUT DELETE>
+order deny,allow
+deny from all
+</Limit>
+
+IndexIgnore *
+
+ErrorDocument 404 /404.php
+
+
+
+
+
+Options +FollowSymlinks
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+
+RewriteEngine on
+
+
+RewriteRule ^brand-([0-9]*)/brand-([0-9]*)$ loader.php?changebrendmain=$1&currbrendmain=$2 [QSA,NE,L]
+
+
+#RewriteRule ^generator generator/index.php [QSA,NE,L]
+#RewriteRule ^concacts concacts.php [QSA,NE,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L]
+
+
+</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

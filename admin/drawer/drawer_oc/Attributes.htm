@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251">
+<meta charset="UTF-8">
+<title>Панель управления</title>
+
+<link rel="stylesheet" type="text/css" href="/admin/drawer/drawer_oc/adminfiles/style.css">
+</head>
+<body>
+
+<div id="container">
+<div id="header">
+  <div class="div1">
+    <div class="div2">
+	<a href="/admin/admin.php">Панель управления</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/">На сайт</a>
+	
+	</div>
+    <div class="div3"><img src="/admin/drawer/drawer_oc/adminfiles/lock.png" alt="" style="position: relative; top: 3px;">
+    <? echo date("d.m.Y",time()); ?>&nbsp;&nbsp;<BR>
+          <? if(isset($_SESSION['loguser']) && $_SESSION['loguser']==1) echo htmlspecialchars($_SESSION['loguserfio']); else echo 'admin'; ?>&nbsp;&nbsp;(<A
+      href="admin.php?act=logout"><B>Выход</B></A>)&nbsp;&nbsp;
+	
+	</div>
+  </div>
+    <div id="menu">
+    <ul class="left sf-js-enabled" style="display: block;">
+      <li ><a href="" class="top">Dashboard</a></li>
+      <li class="selected" ><a class="top">Catalog</a></li>
+      <li class="" ><a class="top">Extensions</a></li>
+    </ul>
+<!--	
+    <ul style="display: block;" class="right sf-js-enabled">
+      <li id="store"><a onclick="window.open('http://oc1/');" class="top">Store Front</a>
+        <ul style="display: none; visibility: hidden;">
+                  </ul>
+      </li>
+      <li id="store"><a class="top" href="http://oc1/admin/index.php?route=common/logout&amp;token=7ee779551259f2a7446bec66d622bf0d">Logout</a></li>
+    </ul>
+-->	
+  </div>
+  </div>
+
+  
+<div id="content">
+  <div class="breadcrumb">
+        <a href="http://oc1/admin/index.php?route=common/home&amp;token=7ee779551259f2a7446bec66d622bf0d">Home</a>
+         :: <a href="http://oc1/admin/index.php?route=catalog/attribute&amp;token=7ee779551259f2a7446bec66d622bf0d">Attributes</a>
+  </div>
+      <div class="box">
+    <div class="heading">
+      <h1><img src="/admin/drawer/drawer_oc/adminfiles/order.png" alt=""> Attributes</h1>
+      <div class="buttons"><a onclick="location = 'http://oc1/admin/index.php?route=catalog/attribute/insert&amp;token=7ee779551259f2a7446bec66d622bf0d'" class="button">Insert</a><a onclick="$('form').submit();" class="button">Delete</a></div>
+    </div>
+    <div class="content">
+      <form action="http://oc1/admin/index.php?route=catalog/attribute/delete&amp;token=7ee779551259f2a7446bec66d622bf0d" method="post" enctype="multipart/form-data" id="form">
+        <table class="list">
+          <thead>
+            <tr>
+              <td style="text-align: center;" width="1"><input onclick="$('input[name*=\'selected\']').attr('checked', this.checked);" type="checkbox"></td>
+              <td class="left">                <a href="http://oc1/admin/index.php?route=catalog/attribute&amp;token=7ee779551259f2a7446bec66d622bf0d&amp;sort=ad.name&amp;order=DESC" class="asc">Attribute Name</a>
+                </td>
+              <td class="left">                <a href="http://oc1/admin/index.php?route=catalog/attribute&amp;token=7ee779551259f2a7446bec66d622bf0d&amp;sort=attribute_group&amp;order=DESC">Attribute Group</a>
+                </td>
+              <td class="right">                <a href="http://oc1/admin/index.php?route=catalog/attribute&amp;token=7ee779551259f2a7446bec66d622bf0d&amp;sort=a.sort_order&amp;order=DESC">Sort Order</a>
+                </td>
+              <td class="right">Action</td>
+            </tr>
+          </thead>
+          <tbody>
+                                    <tr>
+              <td style="text-align: center;">                <input name="selected[]" value="3" type="checkbox">
+                </td>
+              <td class="left">Clockspeed</td>
+              <td class="left">Processor</td>
+              <td class="right">3</td>
+              <td class="right">                [ <a href="http://oc1/admin/index.php?route=catalog/attribute/update&amp;token=7ee779551259f2a7446bec66d622bf0d&amp;attribute_id=3">Edit</a> ]
+                </td>
+            </tr>
+                        <tr>
+              <td style="text-align: center;">                <input name="selected[]" value="1" type="checkbox">
+                </td>
+              <td class="left">Description</td>
+              <td class="left">Processor</td>
+              <td class="right">1</td>
+              <td class="right">                [ <a href="http://oc1/admin/index.php?route=catalog/attribute/update&amp;token=7ee779551259f2a7446bec66d622bf0d&amp;attribute_id=1">Edit</a> ]
+                </td>
+            </tr>
+                      
+                                  </tbody>
+        </table>
+      </form>
+      
+	  <div class="pagination"><div class="results">Showing 1 to 11 of 11 (1 Pages)</div></div>
+	  
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div id="footer"><a href="http://www.opencart.com/">OpenCart</a> © 2009-2013 All Rights Reserved.<br>Version 1.5.4</div>
+</body></html>
