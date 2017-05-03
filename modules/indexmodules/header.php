@@ -84,9 +84,8 @@ if (($rurl=='/basket') || ($rurl=='/basket/subact/topay')){
         <link rel="shortcut icon" href="<?= $_logic['headerarr']['favicon']; ?>" type="image/x-icon" />
     <? //endif; ?>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="/css/gradients.css" media="all" />
-	<script src="/js/jquery-1.10.0.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="/build/css/main.css" media="all" />
+	<script src="/js/jquery-1.10.0.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="/css/jcarousel.basic.css" media="all" />
 	<script src="/js/jquery.jcarousel.js" type="text/javascript"></script>
