@@ -97,7 +97,7 @@
     <script src="/utils/jsz/jalerts/jquery.ui.draggable.js" type="text/javascript"></script>
     <script src="/utils/jsz/jalerts/jquery.alerts.js" type="text/javascript"></script>
     <link href="/utils/jsz/jalerts/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen"/>
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <!--[if lt IE 9]>
     <script>
         document.createElement('header');
@@ -177,126 +177,39 @@
     </div>
     <!-- /.top-header -->
 
-    <div class="header-center">
-
+    <nav>
+        <ul class="nav-list">
+            <?php foreach ($_logic['mainmenuarr'] AS $menu): ?>
+                <li><a href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                    <?php if (array_key_exists('submenu', $menu) && !empty($menu['submenu'])): ?>
+                        <ul class="sub-menu">
+                            <?php foreach ($menu['submenu'] as $submenu): ?>
+                                <li>
+                                    <a href="<?= $submenu["url"] ?>"><?= $submenu["title"] ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <!-- /.sub-menu -->
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <!-- /.nav-list -->
 
         <div class="search">
             <form action="/search" method="post" class="jNice">
                 <div class="search-input">
-                    <input name="q" type="text" name="" placeholder="поиск по сайту"/>
-                    <div class="search-submit"><input type="submit" value=""/></div>
+                    <input name="q" type="text" placeholder="Поиск..."/>
+                    <div class="search-submit"><input type="submit" value=" "/></div>
                 </div>
             </form>
         </div>
-    </div>
+    </nav>
 
-    </div>
+    <?
+    if ($act == "none" || $act == "novinki") {
+        include "slider.php";
+        include "brands.php";
+    }
+    ?>
 </header>
-
-<nav class="top-menu-w ">
-    <div class="mbox">
-        <ul class="top-menu">
-            <?
-            //debug($_logic['mainmenuarr']);exit;
-            foreach ($_logic['mainmenuarr'] AS $key => $menu) {
-                //if ($menu['url']!="/" && $menu['spec1']==0)
-                //{
-                ?>
-                <li><a href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
-                    <?
-                    if (count($menu['submenu']) > 0 && !empty($menu['submenu'][$key]['submenu'])) {
-                        //echo $key;
-
-                        ?>
-                        <div class="sub-menu-w">
-                            <?
-                            foreach ($menu['submenu'] AS $k => $submenu) {
-                                ?>
-
-                                <div class="submenu-box">
-                                    <div class="submenu-box-caption">
-                                        <a href="<?= $submenu['url'] ?>">
-                                            <?= $submenu['title'] ?>
-                                        </a>
-                                    </div>
-                                    <?
-                                    if (count($submenu['submenu']) > 0) {
-
-                                        ?>
-                                        <!--<div class="submenu-box-col">-->
-                                        <ul>
-                                            <?
-                                            foreach ($submenu['submenu'] AS $k2 => $submenu2) {
-                                                ?>
-                                                <li><a href="<?= $submenu2['url'] ?>"><?= $submenu2['title'] ?></a></li>
-                                                <?
-                                            }
-                                            ?>
-                                        </ul>
-                                        <!--</div>-->
-
-
-                                        <?
-                                    }
-                                    ?>
-                                </div>
-                                <?
-                            }
-                            ?>
-                        </div>
-                        <div class="clear"></div>
-                        <?
-                    } else if (count($menu['submenu']) > 0 && empty($menu['submenu'][$key]['submenu'])) {
-                        //echo $key;
-                        ?>
-                        <div class="sub-menu-w">
-                            <div class="submenu-box">
-                                <!--<div class="submenu-box-col">-->
-                                <ul>
-                                    <?
-                                    foreach ($menu['submenu'] AS $k11 => $submenu11) {
-                                        if (empty($submenu11['submenu'])) {
-                                            ?>
-                                            <li><a href="<?= $submenu11['url']; ?>"><?= $submenu11['title']; ?></a></li>
-                                            <?
-                                        }
-
-                                    }
-                                    ?>
-                                </ul>
-                                <!--</div>-->
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <?
-                    }
-                    ?>
-                </li>
-                <?
-                //}
-                //echo $key;
-            }
-            ?>
-        </ul>
-
-        <div class="top-menu-extra">
-            <?
-            foreach ($_logic['mainrightarr'] AS $k => $rmenu) {
-                if ($rmenu['show'] != 0)// && $rmenu['url']!="/")
-                {
-                    ?>
-                    <a href="<?= $rmenu['url'] ?>" class="extra-item"><?= $rmenu['title'] ?></a>
-                    <?
-                }
-            }
-            ?>
-
-        </div>
-    </div>
-</nav>
-<?
-if ($act == "none" || $act == "novinki") {
-    include "slider.php";
-    include "brands.php";
-}
-?>

@@ -1,5 +1,7 @@
 * {
+  font-family: 'pt_sans',arial,sans-serif;
   box-sizing: border-box;
+  font-size: $main-font-color;
 }
 
 .clear-fix {
@@ -11,7 +13,6 @@
 }
 
 body {
-  font-family: 'pt_sans',arial,sans-serif;
   border-top: 3px solid #f8b910;
   @include breakpoint(extra-large) {
     width: 1349px;
