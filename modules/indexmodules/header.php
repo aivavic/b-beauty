@@ -176,36 +176,40 @@
         </div>
     </div>
     <!-- /.top-header -->
+    <div class="nav-wrapper">
+        <nav class="container">
+            <ul class="nav-list">
+                <?php foreach ($_logic['mainmenuarr'] AS $menu): ?>
+                    <li><a class="title-sub-menu" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                        <?php if (array_key_exists('submenu', $menu) && !empty($menu['submenu'])): ?>
+                            <ul class="sub-menu">
+                                <?php foreach ($menu['submenu'] as $submenu): ?>
+                                    <li>
+                                        <a href="<?= $submenu["url"] ?>"><?= $submenu["title"] ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <!-- /.sub-menu -->
+                        <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <!-- /.nav-list -->
 
-    <nav>
-        <ul class="nav-list">
-            <?php foreach ($_logic['mainmenuarr'] AS $menu): ?>
-                <li><a href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
-                    <?php if (array_key_exists('submenu', $menu) && !empty($menu['submenu'])): ?>
-                        <ul class="sub-menu">
-                            <?php foreach ($menu['submenu'] as $submenu): ?>
-                                <li>
-                                    <a href="<?= $submenu["url"] ?>"><?= $submenu["title"] ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                        <!-- /.sub-menu -->
-                    <?php endif; ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <!-- /.nav-list -->
-
-        <div class="search">
-            <form action="/search" method="post" class="jNice">
-                <div class="search-input">
-                    <input name="q" type="text" placeholder="Поиск..."/>
-                    <div class="search-submit"><input type="submit" value=" "/></div>
-                </div>
-            </form>
-        </div>
-    </nav>
-
+            <div class="search">
+                <form action="/search" method="post" class="jNice">
+                    <div class="search-input">
+                        <input name="q" type="text" placeholder="Поиск..."/>
+                        <div class="search-submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="submit" value=" " />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- /.nav-wrapper -->
     <?
     if ($act == "none" || $act == "novinki") {
         include "slider.php";

@@ -32,6 +32,7 @@ header {
       .count-orders {
         background-image: url('/images/basket.png');
         background-repeat: no-repeat;
+        background-size: contain;
         padding: 13px 10px 10px 10px;
         margin-right: 10px;
         font-size: $main-font-size;
@@ -49,5 +50,137 @@ header {
         }
       }
     }
+  }
+
+  .nav-wrapper {
+    padding: 10px 0;
+    border: 1px solid #ebebeb;
+    background-color: #fafafa;
+    nav {
+      @extend .flex;
+      ul.nav-list {
+        @extend .flex;
+        & > li {
+          position: relative;
+          margin-right: 40px;
+          a {
+            color: $main-font-color;
+            font-size: 12px;
+            line-height: 12px;
+            display: block;
+            text-transform: uppercase;
+            &:hover, &:focus {
+              color: $color-border-hover;
+            }
+          }
+
+          .title-sub-menu {
+            padding: 10px 0;
+          }
+
+          &:not(:first-child) {
+            &:before {
+              content: "";
+              display: block;
+              height: 3px;
+              width: 3px;
+              border-radius: 50%;
+              background-color: $color-border-hover;
+              margin-right: 20px;
+              position: absolute;
+              top: 50%;
+              left: -20px;
+              transform: translateY(-50%);
+            }
+          }
+
+          .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-left: 3px solid $color-border-hover;
+            max-height: 0;
+            transition: 1s all ease;
+            overflow: hidden;
+            min-width: 150px;
+            background-color: #fafafa;
+            z-index: 2;
+            li {
+              padding: 10px 0;
+              transition: 0.3s all;
+              a {
+                padding-left: 13px;
+                font-size: $main-font-size;
+                text-transform: none;
+                display: block;
+              }
+
+              &:hover {
+                background-color: $color-border-hover;
+                a {
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            overflow: visible;
+            & > a {
+              color: $color-border-hover;
+            }
+
+            & > .sub-menu {
+              max-height: 300px;
+            }
+          }
+        }
+      }
+    }
+
+    .search {
+      form {
+        border: 1px solid #ebebeb;
+        padding: 12px 15px;
+        color: #aaaaaa;
+        input[type="text"] {
+          width: 100%;
+          border: none;
+        }
+
+        input {
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .search-input {
+          position: relative;
+          width: 270px;
+          .search-submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            input[type="submit"] {
+              border: none;
+              background: transparent;
+              position: absolute;
+              right: 0;
+              cursor: pointer;
+            }
+
+            i {
+              position: absolute;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slider-w {
+    margin-top: 30px;
+    box-shadow: none;
   }
 }
