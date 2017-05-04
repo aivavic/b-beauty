@@ -1,0 +1,51 @@
+header {
+  .top-header {
+    @extend .flex;
+
+    .contact-phones {
+      @extend .flex;
+      .icon {
+        @extend .flex;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+        border-radius: 50%;
+        border: 2px solid $color-border-hover;
+        i {
+          color: $color-border-hover;
+        }
+      }
+
+      .phones {
+        @extend .flex;
+        flex-direction: column;
+        span {
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .basket {
+      @extend .flex;
+      .count-orders {
+        background-image: url('/images/basket.png');
+        background-repeat: no-repeat;
+        padding: 13px 10px 10px 10px;
+        margin-right: 10px;
+      }
+
+      .basket-link {
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: bold;
+        color: $color-border-hover;
+        i {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

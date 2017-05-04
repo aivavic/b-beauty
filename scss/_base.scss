@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+.clear-fix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+body {
+  font-family: 'pt_sans',arial,sans-serif;
+  border-top: 3px solid #f8b910;
+  @include breakpoint(extra-large) {
+    width: 1349px;
+  }
+
+  @include breakpoint(till-extra-large) {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+  @include breakpoint (extra-small) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
