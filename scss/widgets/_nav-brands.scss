@@ -1,5 +1,6 @@
 .brand-list {
   @extend .flex;
+  padding-bottom: 30px;
   li {
     padding: 10px 20px;
     border-radius: 5px;
