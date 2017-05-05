@@ -2,7 +2,7 @@
 <?
 
 ?>
-<div class="slider-w"> 
+<div class="slider-w">
 	<ul id="slider">
         <?
         foreach ($_logic['sliderarr'] AS $key => $value)

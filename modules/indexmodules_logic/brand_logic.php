@@ -1,7 +1,9 @@
 <?
+//echo '<pre>';
+//var_dump($id);
+//echo '</pre>';
 if($act=="cat") $cid = $id;
 else $cid = 0;
-
 
 if ($act=='cat')
 {
