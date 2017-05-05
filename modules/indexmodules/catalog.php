@@ -1,7 +1,6 @@
 <?
 	$catarr = $_logic['catarr'];
 	$catline = $catarr['catline'];
-
 ?>
 		<section class="content_w">
 			<div class="content">

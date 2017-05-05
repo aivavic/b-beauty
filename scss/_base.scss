@@ -1,5 +1,4 @@
 * {
-  font-family: 'pt_sans',arial,sans-serif;
   box-sizing: border-box;
   font-size: $main-font-color;
 }
@@ -14,6 +13,7 @@
 
 body {
   border-top: 3px solid #f8b910;
+  font-family: 'OpenSans',sans-serif;
   @include breakpoint(extra-large) {
     width: 1349px;
   }
@@ -21,6 +21,13 @@ body {
   @include breakpoint(till-extra-large) {
     width: 100%;
   }
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 14px;
+  padding: 10px 0;
+  margin: 20px 0;
 }
 
 a {

@@ -1,36 +1,16 @@
-a.button {
-  color: #faf7f3;
-  font: 400 12px / 24px "OpenSans-Regular";
-  padding: 7px 14px;
-  border: none;
-  background-color: #ec644b;
-}
-
 .button-link {
-  text-transform: uppercase;
+  font-family: "OpenSans-Bold", sans-serif;
   font-size: 12px;
-  display: inline-block;
-  padding: 15px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  background-color: #1c3d50;
-  transition: 0.5s all;
-  &:hover, &:focus {
-    background-color: rgba(44, 62, 80, 0.58);
+  text-transform: uppercase;
+  line-height: 18px;
+  padding: 10px 30px;
+  color: $color-border-hover;
+  border: 1px solid $color-border-hover;
+  border-radius: 5px;
+  transition: 0.3s all;
+  margin: 10px 0;
+  &:hover {
     color: #fff;
-  }
-
-  @include breakpoint(small-tablet-portrait) {
-    font-size: 10px;
-    padding: 10px 5px;
-  }
-}
-
-.button-link-red {
-  @extend .button-link;
-  background-color: #ec644b;
-  &:hover, &:focus {
-    background-color: rgba(255, 100, 72, 0.75);
+    background-color: $color-border-hover;
   }
 }

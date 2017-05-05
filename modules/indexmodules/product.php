@@ -3,7 +3,9 @@
 		$product_info = $_logic['product'];
 		//debug($product_info);
 		//echo $id;
-		?>
+        die('dfdfdf');
+
+        ?>
 <section class="content_w">
 	<div class="content">
 		<!-- breadcrumbs -->
