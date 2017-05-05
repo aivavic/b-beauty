@@ -3,7 +3,7 @@
 
 	$catarr = $_logic['catarr'];
 	$catline = $catarr['catline'];
-?>		
+?>
 
 <h1>
 <?
@@ -20,9 +20,9 @@ if (strlen($_hone)){
 
 <?
 	PrintProductBlocks($catarr['products']);
-	
+
 	$pagerarr = $catarr['pagerarr'];
 	include "modules/indexmodules/pager.php";
-?>				
+?>
 				<?= $catline['text']; ?>
 

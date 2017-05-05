@@ -19,12 +19,13 @@
     </div>
 
     <!-- paginator -->
-    <div class="paginator">
+    <ul class="paginator">
         <?
+
         $pagerarr = $newsarr['pagerarr'];
         include "modules/indexmodules/pager.php";
         ?>
-    </div>
+    </ul>
     <!-- /paginator -->
 
 </div>

@@ -1,0 +1,30 @@
+.paginator {
+  @extend .flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+  li {
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+
+    a {
+      @extend .button-link;
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 18px;
+      border-color: $main-font-color;
+      color: $main-font-color;
+      &:hover {
+        border-color: $color-border-hover;
+        background-color: transparent;
+        color: $main-font-color;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: $color-border-hover;
+        border-color: $color-border-hover;
+      }
+    }
+  }
+}
