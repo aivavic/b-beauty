@@ -1,8 +1,8 @@
 <?
     $mydbhost = 'localhost';
-    $mydbname = 'bebeauty_main';
-    $mydblogin = 'bebeauty_main';
-    $mydbpassword = 'zZlV7Psc';
+    $mydbname = 'b-beauty';
+    $mydblogin = 'root';
+    $mydbpassword = '';
     
     $server = 'http://'.$_SERVER['SERVER_NAME'];
 	

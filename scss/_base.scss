@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  font-size: $main-font-color;
+}
+
+.clear-fix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+body {
+  border-top: 3px solid #f8b910;
+  font-family: 'OpenSans',sans-serif;
+  @include breakpoint(extra-large) {
+    width: 1349px;
+  }
+
+  @include breakpoint(till-extra-large) {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 14px;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+  @include breakpoint (extra-small) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

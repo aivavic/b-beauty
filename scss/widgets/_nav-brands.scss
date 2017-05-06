@@ -1,0 +1,17 @@
+.brand-list {
+  @extend .flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      border-color: $color-border-hover;
+    }
+  }
+}
