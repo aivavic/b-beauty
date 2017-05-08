@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  font-size: $main-font-color;
 }
 
 .clear-fix {
@@ -13,6 +12,8 @@
 
 body {
   border-top: 3px solid #f8b910;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
   font-family: 'OpenSans',sans-serif;
   @include breakpoint(extra-large) {
     width: 1349px;
@@ -37,9 +38,14 @@ a {
   }
 }
 
+p {
+  color: #646464;
+}
+
 .container {
-  width: 980px;
+  width: 1010px;
   margin: auto;
+  padding: 0 15px;
   @include breakpoint (extra-small) {
     width: 100%;
     padding: 0 15px;

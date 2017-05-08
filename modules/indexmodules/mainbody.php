@@ -30,7 +30,7 @@
 
 </div>
 <!-- /.all-products-wrapper -->
-<div id="seotext">
+<div id="seotext" class="container">
     <?
     include($_SERVER['DOCUMENT_ROOT'] . '/public/seo/st.php');
 
