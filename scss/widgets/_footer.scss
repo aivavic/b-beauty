@@ -122,11 +122,15 @@ footer {
     & > div {
       @extend .flex;
       padding: 20px 15px;
+      color: #646464;
+      font-size: 13px;
     }
 
     .social-links {
       @extend .flex;
       align-items: center;
+      color: #646464;
+      font-size: 13px;
       li:not(:first-child) {
         margin-left: 10px;
         a {

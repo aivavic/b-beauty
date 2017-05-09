@@ -99,11 +99,11 @@
     <div class="bottom-footer">
         <div class="container">
             <p class="copyright">
-                <?= $varsline['f_text'] ?>. All rights reserved. Redesign and technical support by <a href="#">NbWeb</a>
+                <?= $varsline['f_text'] ?>. All rights reserved. Redesign and technical support by <a href="http://nbweb.pro/">NbWeb</a>
             </p>
 
             <ul class="social-links">
-                <li><span>Присоединяйтесь:</span></li>
+                <li>Присоединяйтесь:</li>
                 <li><a href="#"><img src="/images/fb.png" alt="img"></a></li>
                 <li><a href="#"><img src="/images/ig.png" alt="img"></a></li>
                 <li><a href="#"><img src="/images/vk.png" alt="img"></a></li>
