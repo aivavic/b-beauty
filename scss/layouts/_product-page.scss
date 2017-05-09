@@ -1,0 +1,119 @@
+.product-page {
+  @extend .flex;
+  align-items: baseline;
+  padding: 30px 15px;
+
+  .product-information {
+    width: 75%;
+
+    .product-properties {
+      .product-images-describe {
+        @extend .flex;
+        align-items: flex-start;
+        padding: 15px 0;
+        .product-images {
+          width: 50%;
+          flex-grow: 1;
+          flex-shrink: 0;
+          .product-image-large {
+            position: relative;
+            height: 320px;
+            padding: 15px;
+            @extend .clear-fix;
+            a {
+              position: absolute;
+              display: block;
+              top: 0;
+              left: 0;
+              height: 100%;
+              text-align: center;
+              width: 100%;
+              img {
+                height: auto;
+                transform: translateY(5%);
+                max-width: 60%;
+                max-height: 275px;
+              }
+            }
+          }
+
+          .product-tiny-images {
+            @extend .flex;
+            justify-content: flex-start;
+          }
+
+          i {
+            cursor: pointer;
+            position: absolute;
+            &:hover, &:active, &:focus {
+              color: $color-border-hover;
+            }
+
+            &.fa-angle-double-right {
+              right: 13px
+            }
+          }
+
+          .slick-list {
+            height: 66px;
+            margin: auto;
+            position: relative;
+            width: 90%;
+          }
+
+          .slick-track {
+            .slick-slide {
+              height: 65px !important;
+              min-width: 64px;
+              margin-right: 17px;
+              padding: 5px 15px;
+              border-radius: 3px;
+              border: 1px solid transparent;
+              &:hover {
+                border-color: $color-border-hover;
+                a {
+                  border: none;
+                }
+              }
+
+              &:focus {
+                outline: none;
+              }
+
+              a {
+                position: relative;
+                display: block;
+                height: 100%;
+                width: 100%;
+                @extend .clear-fix;
+                img {
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        .product-details {
+          @extend .flex;
+          align-items: stretch;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 50%;
+          flex-grow: 1;
+          flex-shrink: 0;
+          .price {
+            color: $main-font-color;
+            .product-price {
+              font-size: 36px;
+              line-height: 36px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -113,6 +113,9 @@ header {
                 font-size: $main-font-size;
                 text-transform: none;
                 display: block;
+                &:before {
+                  display: none;
+                }
               }
 
               &:hover {
@@ -184,6 +187,7 @@ header {
     box-shadow: none;
     img {
       width: 980px;
+      max-width: 980px;
     }
   }
 }

@@ -1,0 +1,36 @@
+
+.title-sub-menu {
+  font-size: 12px;
+  line-height: 24px;
+  display: block;
+  color: $main-font-color;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.sub-menu {
+  li {
+    a {
+      position: relative;
+      display: block;
+      color: #646464;
+      padding-left: 20px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-border-hover;
+      }
+
+      &:hover {
+        color: $color-border-hover;
+      }
+    }
+  }
+}

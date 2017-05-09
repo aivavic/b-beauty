@@ -68,8 +68,8 @@
     <link rel="shortcut icon" href="<?= $_logic['headerarr']['favicon']; ?>" type="image/x-icon"/>
     <? //endif; ?>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic'
-          rel='stylesheet' type='text/css'>
+<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic'-->
+<!--          rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="/build/css/main.css" media="all"/>
     <script src="/js/jquery-1.10.0.min.js"></script>
 
@@ -96,6 +96,8 @@
     <? //Подключаем jAlert для вывода сообщений ?>
     <script src="/utils/jsz/jalerts/jquery.ui.draggable.js" type="text/javascript"></script>
     <script src="/utils/jsz/jalerts/jquery.alerts.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <link href="/utils/jsz/jalerts/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen"/>
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <!--[if lt IE 9]>

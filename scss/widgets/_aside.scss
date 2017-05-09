@@ -1,0 +1,8 @@
+aside {
+  width: 25%;
+  .active {
+    a {
+      color: $color-border-hover;
+    }
+  }
+}

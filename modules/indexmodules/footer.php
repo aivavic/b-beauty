@@ -111,5 +111,68 @@
         </div>
     </div>
 </footer>
+
+
+<!-- fancybox wrappers -->
+<div class="fancybox-wrapper">
+
+    <!-- size table -->
+    <div id="size-table">
+        <div class="ctext">
+            <?= $varsline['sizetable']?>
+        </div>
+    </div>
+    <!-- end size table -->
+
+
+    <!-- product add -->
+    <div id="product-add">
+
+        <div class="product-add-heading">У вас в корзине <span class="basketnum"> <?= $_logic['headerarr']['basket_num']?> </span> <span class="baskettovarov"><?= $_logic['headerarr']['basket_tovarov']?></span>.</div>
+        <div id="product-add2">
+            <div class="cart-product-item">
+                <table>
+                    <tr>
+                        <td class="cart-product-cancel"><a href="#" class="close-gray"></a></td>
+                        <td class="cart-product-image"><a href="#"><img src="/images/t_product-mainimg1.png" alt="" /></a></td>
+                        <td class="cart-product-desc">
+                            <div><a href="#" class="cart-product-name">Джинсы-стретч John Baner JEANSWEAR</a>
+                                <p class="cart-product-article">Артикул: 0256938</p> </div>
+                        </td>
+                        <td class="cart-product-size"><div>XL</div></td>
+                        <td class="cart-product-price"><div>129 грн</div></td>
+
+                    </tr>
+                </table>
+            </div>
+
+            <div class="cart-product-item">
+                <table>
+                    <tr>
+                        <td class="cart-product-cancel"><a href="#" class="close-gray"></a></td>
+                        <td class="cart-product-image"><a href="#"><img src="/images/t_product-mainimg1.png" alt="" /></a></td>
+                        <td class="cart-product-desc">
+                            <div><a href="#" class="cart-product-name">Джинсы-стретч John Baner JEANSWEAR</a>
+                                <p class="cart-product-article">Артикул: 0256938</p> </div>
+                        </td>
+                        <td class="cart-product-size"><div>XL</div></td>
+                        <td class="cart-product-price"><div>129 грн</div></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="product-add-footer">
+            <div class="product-add-exit">
+                <a href="#" class="arrow-left">продолжить покупки</a>
+            </div>
+
+            <div class="product-add-orderbutton">
+                <a href="/basket" class="button-orange"><span class="button-orange-title">ОФОРмить заказ</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- end product add -->
+</div>
 </body>
 </html>
