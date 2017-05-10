@@ -15,6 +15,18 @@
     color: $main-font-color;
   }
 
+  .product-image {
+    height: 240px;
+    width: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:  translateX(-50%) translateY(-50%);
+    }
+  }
+
   .product-name {
     padding: 15px 0;
     font-size: $main-font-size;
@@ -31,7 +43,6 @@
   }
 
   .price {
-    @extend .flex;
     padding: 10px 0;
     .actual-price {
       color: #1a181d;
@@ -42,6 +53,7 @@
     .old-price {
       font-size: $main-font-size;
       line-height: 14px;
+      text-decoration: line-through;
     }
   }
 

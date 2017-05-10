@@ -8,21 +8,22 @@
       color: #646464;
       font-size: 13px;
       line-height: 20px;
-      &.active {
+      letter-spacing: -0.6px;
+      &.active, &:hover {
         color: $color-border-hover;
       }
     }
 
     &:not(:first-child) {
       position: relative;
-      margin-left: 26px;
+      margin-left: 24px;
       &:before {
         content: '\f054';
         position: absolute;
         font-family: "FontAwesome";
         font-size: 10px;
         top: 50%;
-        left: -13px;
+        left: -12px;
         transform: translateX(-50%) translateY(-50%);
         color: $color-border-hover;
       }

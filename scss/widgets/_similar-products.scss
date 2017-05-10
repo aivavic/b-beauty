@@ -1,0 +1,6 @@
+.similar {
+  border-top: 1px solid #ddd;
+  .products-wrapper {
+    @extend .flex;
+  }
+}

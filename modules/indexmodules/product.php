@@ -64,21 +64,22 @@ $product_info = $_logic['product'];
                 <p class="price">
                     <span class="product-price"><?= $product_info['pricestr'] ?></span>
                     <span class="product-price-currency"><?= $product_info['price_valuta'] ?></span>
-                </p>
-                <!-- /.price -->
-                <p class="product-article">Артикул: <?= $product_info['artikul'] ?></p>
-                <p class="product-old-price">
+                    <span class="product-old-price">
                     <? if ($product_info['priceold'] > 0) { ?>
                         <del>
                             <?= $product_info['priceoldstr'] . " " . $product_info['price_valuta'] ?>
                         </del>
                     <? } ?>
 
+                    </span>
                 </p>
+                <!-- /.price -->
+                <p class="product-article">Артикул: <?= $product_info['artikul'] ?></p>
+
                 <div class="product-size">
                     <div class="size-select">
-                        <div class="size-select-desc">Размер:</div>
-                        <div class="jNice size-select-input">
+                        <span class="size-select-desc">Размер:</span>
+                        <div class="select-wrapper">
                             <?
                             if (isset($product_info['line']['razmer']) && $product_info['line']['razmer'] != '') {
                                 ?>
@@ -98,13 +99,13 @@ $product_info = $_logic['product'];
                                 <?
                             }
                             ?>
-
                         </div>
-                        <div class="clear"></div>
+                        <!-- /.select-wrapper -->
                     </div>
 
                     <div class="size-table-w">
-                        <a href="#size-table" class="size-table-link dashed fancybox">Таблицы размеров</a>
+                        <a href="#size-table" class="size-table-link fancybox">Таблицы размеров <i
+                                    class="fa fa-info-circle" aria-hidden="true"></i></a>
                     </div>
                 </div>
 
@@ -112,12 +113,8 @@ $product_info = $_logic['product'];
                 <?
                 if ($product_info['line']['spec2'] == 1) {
                     ?>
-                    <div class="product-incart-button">
-                        <a <?= 'onclick= "size = document.getElementById(\'size\').value; AddToBasket(' . $product_info['id'] . ',' . $product_info['price'] . ',size); return false;" '; ?>
-                                href="#product-add" class="button-orange icon-incart fancybox">
-                            <span class="button-orange-title">Добавить в корзину</span>
-                        </a>
-                    </div>
+                    <a <?= 'onclick= "size = document.getElementById(\'size\').value; AddToBasket(' . $product_info['id'] . ',' . $product_info['price'] . ',size); return false;" '; ?>
+                            href="#product-add" class="cart-button fancybox">Добавить в корзину</a>
                     <?
                 }
                 ?>
@@ -125,17 +122,14 @@ $product_info = $_logic['product'];
                 <?
                 if ($varsline['subtext1'] != '') {
                     ?>
-                    <div class="product-details-text">
+                    <p class="product-details-text">
                         <?
-
-
                         $dosty = $varsline['subtext1'];
                         $dosty = str_replace('http://bebeauty.km.ua', '', $dosty);
                         $dosty = str_replace('href="/dostavka"', 'href="/paydeliver"', $dosty);
                         echo $dosty;
-
                         ?>
-                    </div>
+                    </p>
                     <?
                 }
                 ?>
@@ -154,34 +148,31 @@ $product_info = $_logic['product'];
     if (!empty($_logic['product_similar'])) {
         ?>
         <div class="similar">
-            <div class="similar-caption">ПОХОЖИЕ ТОВАРЫ</div>
+            <h3>Похожие товары</h3>
 
-            <div class="cat-product-linethree">
+            <div class="products-wrapper">
                 <?
                 foreach ($_logic['product_similar'] AS $key => $item) {
                     ?>
-                    <div class="cat-product">
-                        <div class="cat-product-image"><a href="<?= $item['url'] ?>"><span
-                                        class="vfix"></span><img src="<?= $item['fname'] ?>" alt=""/></a></div>
-                        <div class="cat-product-name"><a href="<?= $item['url'] ?>"><?= $item['title'] ?></a>
-                        </div>
-                        <div class="cat-product-brand"><?= $item['brand_name'] ?></div>
-                        <div class="cat-product-priceline"><span
-                                    class="actual-price"><?= $item['pricestr'] ?> <?= $item['price_valuta'] ?></span><span
-                                    class="old-price">
+                    <div class="product">
+                        <a class="product-image" href="<?= $item['url'] ?>"><img src="<?= $item['fname'] ?>" alt="img"/></a>
+                        <a class="product-name" href="<?= $item['url'] ?>"><?= $item['title'] ?></a>
+                        <p class="product-brand">Производитель: <?= $item['brand_name'] ?></p>
+                        <p class="price">
+                            <span class="old-price">
                                         <?
 
                                         if ($item['priceold'] > 0) {
                                             ?>
-                                            <del>
-                                                <?= $item['priceoldstr'] ?> <?= $item['price_valuta'] ?>
-                                            </del>
+                                            <?= $item['priceoldstr'] ?> <?= $item['price_valuta'] ?>
                                             <?
                                         }
                                         ?>
-
                                     </span>
-                        </div>
+                            <span class="actual-price"><?= $item['pricestr'] ?> <?= $item['price_valuta'] ?></span>
+                        </p>
+                        <a href="<?= $product['url'] ?>" class="button-link">Купить</a>
+                        <!-- /.button-link -->
                     </div>
                     <?
                 }

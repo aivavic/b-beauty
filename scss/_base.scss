@@ -27,11 +27,20 @@ body {
   br:after {content: "\00a0"}
 }
 
-h1 {
+h1, h3 {
   font-size: 20px;
   line-height: 22px;
   padding: 10px 0;
   margin: 20px 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 12px;
+  padding: 10px 15px;
 }
 
 a {
@@ -44,6 +53,13 @@ a {
 
 p {
   color: #646464;
+  strong {
+    font-weight: bold;
+  }
+  
+  a {
+    color: $color-border-hover;
+  }
 }
 
 img {
