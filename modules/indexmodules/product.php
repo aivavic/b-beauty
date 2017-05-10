@@ -79,7 +79,7 @@ $product_info = $_logic['product'];
                 <div class="product-size">
                     <div class="size-select">
                         <span class="size-select-desc">Размер:</span>
-                        <div class="select-wrapper">
+                        <div class="jNice select-wrapper">
                             <?
                             if (isset($product_info['line']['razmer']) && $product_info['line']['razmer'] != '') {
                                 ?>
@@ -92,7 +92,6 @@ $product_info = $_logic['product'];
                                             <option><?= $param1 ?></option>
                                             <?
                                         }
-
                                     }
                                     ?>
                                 </select>

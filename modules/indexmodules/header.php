@@ -68,8 +68,10 @@
     <link rel="shortcut icon" href="<?= $_logic['headerarr']['favicon']; ?>" type="image/x-icon"/>
     <? //endif; ?>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
-<!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic'-->
-<!--          rel='stylesheet' type='text/css'>-->
+    <!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic'-->
+    <!--          rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" type="text/css" href="/css/jnice.css" media="all"/>
+
     <link rel="stylesheet" href="/build/css/main.css" media="all"/>
     <script src="/js/jquery-1.10.0.min.js"></script>
 
@@ -86,8 +88,7 @@
     <script src="/js/selectivizr-min.js" type="text/javascript"></script>
     <script src="/js/jquery.watermark.js" type="text/javascript"></script>
 
-    <!--    <link rel="stylesheet" type="text/css" href="/css/jnice.css" media="all"/>-->
-    <!--    <script src="/js/jquery.jnice.js" type="text/javascript"></script>-->
+    <script src="/js/jquery.jnice.js" type="text/javascript"></script>
 
     <script src="/js/scr.js" type="text/javascript"></script>
     <? //Подключаем файл с полезными функциями ?>
@@ -199,12 +200,12 @@
             <!-- /.nav-list -->
 
             <div class="search">
-                <form action="/search" method="post" class="jNice">
+                <form action="/search" method="post">
                     <div class="search-input">
                         <input name="q" type="text" placeholder="Поиск..."/>
                         <div class="search-submit">
                             <i class="fa fa-search" aria-hidden="true"></i>
-                            <input type="submit" value=" " />
+                            <input type="submit" value=" "/>
                         </div>
                     </div>
                 </form>

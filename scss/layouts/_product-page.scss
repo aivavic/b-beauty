@@ -6,6 +6,18 @@
   .product-information {
     width: 75%;
 
+    .brand-list {
+      justify-content: flex-start;
+      padding: 20px 0 0 0;
+      li {
+        padding: 5px 10px;
+        a {
+          width: 100px;
+          height: 35px;
+        }
+      }
+    }
+
     .product-properties {
       .product-images-describe {
         @extend .flex;
@@ -128,6 +140,7 @@
 
             .select-wrapper {
               position: relative;
+              width: 120px;
               select {
                 position: relative;
                 background-color: transparent;

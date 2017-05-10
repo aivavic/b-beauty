@@ -11,27 +11,25 @@ $catline = $catarr['catline'];
     <!-- breadcrumbs -->
     <?
     if ($act == "cat") {
-    ?>
-    <div class="breadcrumbs">
-        <?
-        $cbr = 0;
-        foreach ($_logic['bread'] AS $k => $val) {
-            $cbr++;
-            ?>
-            <a href="<?= $val['url'] ?>" <? if ($cbr == count($_logic['bread'])) echo "class='active'"; ?>> <?= $val['title'] ?></a>
-            <?
-            if ($cbr != count($_logic['bread'])) {
-
-                ?>
-<!--                <span class="br-sep">&gt;</span>-->
-                <?
-            }
-        }
         ?>
+        <ul class="breadcrumbs">
+            <?
+            $cbr = 0;
+            foreach ($_logic['bread'] AS $k => $val) {
+                $cbr++;
+                ?>
+                <li>
+                    <a href="<?= $val['url'] ?>" <? if ($cbr == count($_logic['bread'])) echo "class='active'"; ?>> <?= $val['title'] ?></a>
+                </li>
+                <?
+                if ($cbr != count($_logic['bread'])) {
 
-    </div>
-
-    <div class="product-description">
+                    ?>
+                    <?
+                }
+            }
+            ?>
+        </ul>
         <!-- small slider -->
         <?
         if (!empty($_logic['sliderarr1'])) {
@@ -42,7 +40,7 @@ $catline = $catarr['catline'];
                     foreach ($_logic['sliderarr1'] AS $key => $slide) {
                         ?>
                         <li class="slider-small-item"><a href="<?= $slide['title'] ?>" class="overall"></a><img
-                                    src="<?= $slide['fname'] ?>" <?= $slide['addstr'] ?> alt=""/></li>
+                                    src="<?= $slide['fname'] ?>" <?= $slide['addstr'] ?> alt="img"/></li>
                         <?
                     }
                     ?>
@@ -54,31 +52,26 @@ $catline = $catarr['catline'];
         ?>
 
 
-        <!-- brand list -->
+        <!--         brand list-->
 
 
-<!--        <div class="brand-list">-->
-<!--            --><?//
-//            $curl = GetSeoUrl('cat', $id);
-//
-//            foreach ($_logic['brands'] AS $key => $brands) {
-//
-//                ?>
-<!--                <a href="--><?//= $curl ?><!--/--><?//= $brands['url'] ?><!--" class="brand-list-item"><span-->
-<!--                            class="vfix"></span><img src="--><?//= $brands['fname'] ?><!--" alt=""/></a>-->
-<!--                --><?//
-//            }
-//            ?>
-<!--            <span class="juster"></span>-->
-<!--        </div>-->
+        <ul class="brand-list">
+            <?
+            $curl = GetSeoUrl('cat', $id);
 
-        <!-- end brand list -->
+            foreach ($_logic['brands'] AS $key => $brands) {
+
+                ?>
+                <li><a href="<?= $curl ?>/<?= $brands['url'] ?>" class="brand-list-item"><span
+                                class="vfix"></span><img src="<?= $brands['fname'] ?>" alt="img"/></a></li>
+                <?
+            }
+            ?>
+        </ul>
+
         <?
-        }
-        ?>
-    </div>
-    <!-- /.product-description -->
-    <!-- catalog heading -->
+    }
+    ?>
 
     <h1 class="catalog-heading-new">
         <?
@@ -91,78 +84,11 @@ $catline = $catarr['catline'];
         }
         ?>
     </h1>
-
-    <?
-    //                        $instr = GetInStr($id,$par->categorytable);
-    //                        $sql = "SELECT `razmer` FROM $par->objectstable WHERE `hide`=0 AND `categid` IN (-1 $instr) AND `razmer`!=''";
-    //                        echo $sql.'<BR>';
-    //                        $res = mysql_query($sql);
-    //
-    //                        $sizes = Array();
-    //                        while($line = mysql_fetch_array($res,MYSQL_ASSOC))
-    //                        {
-    //                            echo $line['razmer'].'<BR>';
-    //                            $a = explode(';',$line['razmer']);
-    //                            $sizes = array_merge($sizes,$a);
-    //                        }
-    //                        $sizes = array_unique($sizes);
-    //
-    // Debug($_logic['sizes']);
-    ?>
     <!-- catalog filter -->
     <?
     if ($act == 'cat') {
         ?>
         <div class="catalog-filter">
-            <div class="size-select">
-                <div class="size-select-desc">Размер:</div>
-                <div class="jNice size-select-input">
-                    <?
-                    $currurl = GetSeoUrl('cat', $id);
-                    $sizeurl = "?changesize=1&size=";
-
-                    $queryurl = '';
-                    $addurl = '';
-                    $queryurl = $_SERVER['QUERY_STRING'];
-
-                    //                                if ($queryurl=='')
-                    //                                {
-                    //                                    $sizeurl = "?".$sizeurl;
-                    //                                }
-                    if ($queryurl != '') {
-//                                    $sizeurl = "?".$sizeurl;
-
-                        if (isset($_REQUEST['changebrend']) && isset($_REQUEST['brendid'])) {
-
-                            $changebrend = $_REQUEST['changebrend'];
-                            $brendid = $_REQUEST['brendid'];
-                            $addurl = $addurl . "&changebrend=" . $changebrend . "&brendid=" . $brendid;
-                        }
-
-                        if (isset($_REQUEST['changeorder'])) {
-                            $changeorder = $_REQUEST['changeorder'];
-                            $url = $url . "&changeorder=" . $changeorder;
-                        }
-                    }
-                    ?>
-                    <select OnChange="document.location='<?= $currurl ?>/<?= $sizeurl ?>'+this.value+'<?= $addurl ?>'">
-                        <option> --</option>
-                        <?
-                        foreach ($_logic['sizes'] AS $key => $size) {
-                            ?>
-                            <option <? if (isset($_REQUEST['size']) && $_REQUEST['size'] == $size) echo "selected" ?>><?= $size ?></option>
-                            <?
-                        }
-                        ?>
-                        <!--									<option>D</option>-->
-                        <!--									<option>XXL</option>-->
-                        <!--									<option>M</option>-->
-                        <!--									<option>XXI</option>-->
-                    </select>
-                </div>
-                <div class="clear"></div>
-            </div>
-
             <div class="catalog-sort">
                 <div class="sort-method">
                     <?
@@ -186,7 +112,8 @@ $catline = $catarr['catline'];
 
                         }
                         ?>
-                        <span class="sort-down active"><a href="<?= $currenturl ?>/<?= $url ?>" class="dashed">по убыванию цены </a>&nbsp;&darr;</span>
+                        <span class="sort-down active"><a href="<?= $currenturl ?>/<?= $url ?>" class="dashed">Цены по убыванию <i
+                                        class="fa fa-long-arrow-down" aria-hidden="true"></i></a></span>
                         <?
                     } else {
                         $url = '?changeorder=0';
@@ -207,7 +134,8 @@ $catline = $catarr['catline'];
 
                         }
                         ?>
-                        <span class="sort-up active"><a href="<?= $currenturl ?>/<?= $url ?>" class="dashed">по возрастанию цены </a>&nbsp;&uarr;</span>
+                        <span class="sort-up active"><a href="<?= $currenturl ?>/<?= $url ?>" class="dashed">Цены по возрастанию <i
+                                        class="fa fa-long-arrow-up" aria-hidden="true"></i></a></span>
                         <?
                     }
                     ?>
@@ -215,30 +143,66 @@ $catline = $catarr['catline'];
 
                 </div>
             </div>
+
+            <div class="size-select">
+                <p class="size-select-desc">Размер:</p>
+                <div class="jNice size-select-input">
+
+                    <?
+                    $currurl = GetSeoUrl('cat', $id);
+                    $sizeurl = "?changesize=1&size=";
+
+                    $queryurl = '';
+                    $addurl = '';
+                    $queryurl = $_SERVER['QUERY_STRING'];
+
+                    if ($queryurl != '') {
+
+                        if (isset($_REQUEST['changebrend']) && isset($_REQUEST['brendid'])) {
+
+                            $changebrend = $_REQUEST['changebrend'];
+                            $brendid = $_REQUEST['brendid'];
+                            $addurl = $addurl . "&changebrend=" . $changebrend . "&brendid=" . $brendid;
+                        }
+
+                        if (isset($_REQUEST['changeorder'])) {
+                            $changeorder = $_REQUEST['changeorder'];
+                            $url = $url . "&changeorder=" . $changeorder;
+                        }
+                    }
+                    ?>
+                    <select OnChange="document.location='<?= $currurl ?>/<?= $sizeurl ?>'+this.value+'<?= $addurl ?>'">
+                        <option> --</option>
+                        <?
+                        foreach ($_logic['sizes'] AS $key => $size) {
+                            ?>
+                            <option <? if (isset($_REQUEST['size']) && $_REQUEST['size'] == $size) echo "selected" ?>><?= $size ?></option>
+                            <?
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
         </div>
-        <div class="clear"></div>
         <?
     }
     ?>
-    <!-- products 3inline -->
-    <div class="cat-product-linethree">
+    <!-- product-list -->
+    <div class="product-list">
         <?
         PrintProductBlocks($catarr['products']);
         ?>
 
     </div>
-    <!-- end products 3inline -->
+    <!-- end product-list -->
 
     <!-- paginator -->
-    <div class="paginator">
+    <ul class="paginator">
         <?
         $pagerarr = $catarr['pagerarr'];
         include "modules/indexmodules/pager.php";
         ?>
-
-    </div>
-
-
+    </ul>
     <div id="seotext">
         <?
         include($_SERVER['DOCUMENT_ROOT'] . '/public/seo/st.php');
@@ -249,10 +213,7 @@ $catline = $catarr['catline'];
         ?>
     </div>
 
-
 </div>
-<!-- end catalog-->
-<!--</section>-->
 </div>
 <!-- /.container -->
 

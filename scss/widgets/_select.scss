@@ -1,0 +1,111 @@
+.size-select {
+  @extend .flex;
+}
+
+.size-select-desc {
+  margin-right: 10px;
+}
+
+.size-select-input {
+  width: 120px;
+}
+
+.jNiceSelectWrapper {
+  display: block;
+  box-shadow: none;
+  height: auto;
+  border: 1px solid #ddd;
+  z-index: 3;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: normal;
+  border-radius: 4px;
+  position: relative;
+  behavior: url(../css/pie.htc);
+  &:after {
+    content: '\f078';
+    display: block;
+    font-family: "FontAwesome";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 12px;
+  }
+}
+
+.jNiceSelectWrapper select {
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  padding-top: 4px;
+}
+
+.jNiceSelectWrapper {
+  ul {
+    top: 27px;
+    background-color: #f9f9f9;
+    position: absolute;
+    left: -1px;
+    list-style: none;
+    display: none;
+    margin: 0;
+    overflow-y: auto;
+    z-index: 99;
+    min-width: 101%;
+    white-space: nowrap;
+    max-height: 172px;
+    /* хром, сафари */
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    /* ie 10+ */
+    -ms-overflow-style: none;
+    /* фф (свойство больше не работает, других способов тоже нет)*/
+    overflow: -moz-scrollbars-none;
+    a {
+      font-size: 13px;
+      font-family: 'PT Sans', tahoma, sans-serif;
+      color: #aaa;
+      display: block;
+      padding: 0 25px 0 10px;
+      text-decoration: none;
+      line-height: 30px;
+      &.selected, &:hover {
+        background-color: $color-border-hover;
+      }
+    }
+  }
+
+  .jNiceSelectText {
+    height: 30px;
+    padding: 3px 0 0 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    float: none;
+    position: absolute;
+    z-index: 100;
+    font-size: 13px;
+    font-family: 'PT Sans', tahoma, sans-serif;
+  }
+
+  .jNiceSelectOpen {
+    width: 25px;
+    height: 30px;
+    background: url(/images/select.png) no-repeat center center;
+    z-index: 100;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0;
+  }
+}
