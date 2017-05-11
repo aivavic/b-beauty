@@ -242,7 +242,7 @@ function DrawAdminHeader()
     ?>
     <TABLE
             style="BORDER-RIGHT: #345560 1px solid; BORDER-LEFT: #345560 1px solid; BORDER-BOTTOM: #345560 1px solid"
-            height=22 cellPadding=0 width="100%" border=0>
+            height=22 width="100%" border=0>
         <TBODY>
         <TR style="BACKGROUND-COLOR: #8498a3">
             <?
