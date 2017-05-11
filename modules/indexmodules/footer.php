@@ -174,5 +174,6 @@
     </div>
     <!-- end product add -->
 </div>
+<link href="/css/font-awesome.min.css?4.0.7" rel='stylesheet'>
 </body>
 </html>
