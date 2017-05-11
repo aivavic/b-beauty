@@ -164,11 +164,11 @@
         </div>
         <div class="product-add-footer">
             <div class="product-add-exit">
-                <a href="#" class="arrow-left button-link">продолжить покупки</a>
+                <a href="#" class="arrow-left button-link"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Продолжить покупки</a>
             </div>
 
             <div class="product-add-orderbutton">
-                <a href="/basket" class="button-orange button-link-pull"><span class="button-orange-title">ОФОРмить заказ </span></a>
+                <a href="/basket" class="button-orange button-link-pull"><span class="button-orange-title">Оформить заказ <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
         </div>
     </div>
