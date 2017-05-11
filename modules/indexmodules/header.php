@@ -67,7 +67,7 @@
     <link rel="icon" href="<?= $_logic['headerarr']['favicon']; ?>" type="image/x-icon"/>
     <link rel="shortcut icon" href="<?= $_logic['headerarr']['favicon']; ?>" type="image/x-icon"/>
     <? //endif; ?>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
+
     <!--    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic'-->
     <!--          rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="/css/jnice.css" media="all"/>

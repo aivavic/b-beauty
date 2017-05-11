@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 var minifyCSS = require('gulp-csso');
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('css', function(){
     return gulp.src('./scss/**/*.scss')
@@ -14,6 +15,12 @@ gulp.task('css', function(){
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/css'))
 });
+
+//gulp.task('image', function(){
+//    return gulp.src('src/images/*')
+//        .pipe(imagemin())
+//        .pipe(gulp.dest('images'))
+//});
 
 gulp.task('default', [ 'css' ]);
 gulp.task('watch', function () {
