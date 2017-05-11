@@ -1,0 +1,49 @@
+table {
+  border: 1px solid #ddd;
+  tr {
+    td, th {
+      padding: 10px 15px;
+      &:not(:first-child) {
+        border-left: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+
+  thead {
+    border-bottom: 1px solid #ddd;
+    th {
+      font-weight: bold;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        vertical-align: top;
+        text-align: center;
+        * {
+          color: $main-font-color;
+        }
+
+        &.close {
+          vertical-align: middle;
+          a {
+            i {
+              color: #ff0000;
+            }
+          }
+        }
+
+        input.product-count {
+          max-width: 100px;
+          text-align: center;
+        }
+
+        .product-price {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

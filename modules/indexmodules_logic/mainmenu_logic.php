@@ -16,14 +16,7 @@
     if($line = mysql_fetch_array($res,MYSQL_ASSOC)) $activemenuid = $line['id'];
   }
 
-  
-  /*if($act=="news" || $act=="gallery" || $act=="contacts" || $act=="cat" || $act=="articles")
-  {
-    $sql = "SELECT * FROM $par->topmenutable WHERE url='/$act'";
-    $res = mysql_query($sql);
-    if($line = mysql_fetch_array($res,MYSQL_ASSOC)) $activemenuid = $line['id'];
-  }*/
-  
+
 	$k=0;
 	while($activemenuid!=0)
 	{
@@ -79,22 +72,7 @@
 		{
 		  $k2++;
 		  $url2 = GetSeoUrl('cat',$line2['id'],$line2);
-      
-      
-		/*  $fname2 = ''; $addstr2 = '';
-		  //определяем картинку
-		  if(is_file('fotos/service_sm_'.$line2['id'].'.jpg')) $fname2 = 'fotos/slider_sm_'.$line2['id'].'.jpg';
-	      
-		  
-		  //если картинка больше нужных размеров приводим ее к нужным
-		  if($fname2!='')
-		  {
-		      $addstr2 = GetAddStr(134,134,$fname2);
-		      $fname2 = '/'.$fname2;
-		  }*/
 
-		  //echo '<li><a href="'.$url2.'">'.htmlspecialchars($line2['title'.$langadd]).'</a></li>';
-		  
 		  $sql3 = "SELECT * FROM $par->categorytable WHERE parentid=".$line2['id']." AND hide=0 ORDER BY prior";
 		  
 		  $res3 	= mysql_query($sql3);
@@ -107,20 +85,7 @@
 		      {
 			  $k3++;
 			  $url3 = GetSeoUrl('cat',$line3['id'],$line3);
-			  
-			  /*$fname3 = ''; $addstr3 = '';
-			  //определяем картинку
-			  if(is_file('fotos/service_sm_'.$line3['id'].'.jpg')) $fname3 = 'fotos/slider_sm_'.$line3['id'].'.jpg';
-		      
-			  
-			  //если картинка больше нужных размеров приводим ее к нужным
-			  if($fname3!='')
-			  {
-			      $addstr3 = GetAddStr(134,134,$fname3);
-			      $fname3 = '/'.$fname3;
-			  }*/
 
-			  
 			  $submenu2[] = Array('id'=>$line3['id'],'url'=>$url3,'title'=>$line3['title']);
 		      }
 		  }

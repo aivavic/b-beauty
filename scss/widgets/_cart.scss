@@ -1,0 +1,152 @@
+.cart-page {
+  .cart-products {
+    .cart-product-item {
+      table {
+        border: 1px solid #ddd;
+        tr {
+          td, th {
+            padding: 10px 15px;
+            &:not(:first-child) {
+              border-left: 1px solid #ddd;
+              border-top: 1px solid #ddd;
+            }
+          }
+        }
+
+        thead {
+          border-bottom: 1px solid #ddd;
+          th {
+            font-weight: bold;
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              vertical-align: top;
+              text-align: center;
+              * {
+                color: $main-font-color;
+              }
+
+              &.close {
+                vertical-align: middle;
+                a {
+                  i {
+                    color: #ff0000;
+                  }
+                }
+              }
+
+              input.product-count {
+                max-width: 100px;
+                text-align: center;
+              }
+
+              .product-price {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .product-total-count {
+    padding: 15px 0;
+    color: $main-font-color;
+    font-weight: bold;
+    text-align: right;
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .cart-privatinfo {
+    padding: 15px 0;
+    .cart-privatinfo-rows {
+      @extend .flex;
+      justify-content: flex-start;
+      padding: 10px 0;
+      & > * {
+        &:not(:first-child) {
+          margin-left: 15px;
+        }
+
+        &.required {
+          position: relative;
+          &:before {
+            content: "*";
+            position: absolute;
+            top: -3px;
+            left: 3px;
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-add-footer {
+  @extend .flex;
+  width: 100%;
+  margin: 15px 0;
+  a {
+    display: block;
+    padding: 5px 10px;
+  }
+}
+
+.cart-product-item {
+  table {
+    border: 1px solid #ddd;
+    tr {
+      td, th {
+        padding: 10px 15px;
+        &:not(:first-child) {
+          border-left: 1px solid #ddd;
+          border-top: 1px solid #ddd;
+        }
+      }
+    }
+
+    thead {
+      border-bottom: 1px solid #ddd;
+      th {
+        font-weight: bold;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          vertical-align: top;
+          text-align: center;
+          * {
+            color: $main-font-color;
+          }
+
+          &.close {
+            vertical-align: middle;
+            a {
+              i {
+                color: #ff0000;
+              }
+            }
+          }
+
+          input.product-count {
+            max-width: 100px;
+            text-align: center;
+          }
+
+          .product-price {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
