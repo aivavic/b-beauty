@@ -119,7 +119,7 @@ Copyright (c)2005-2010 <a href="http://www.xml-sitemaps.com/standalone-google-si
  
  
   <xsl:template match="sm:sitemapindex">
-<table cellpadding="0" cellspacing="0" width="100%">
+<table cellspacing="0" width="100%">
 <tr>
 <th></th>
 <th>URL</th>

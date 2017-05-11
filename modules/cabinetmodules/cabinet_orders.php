@@ -52,7 +52,7 @@
 
 		    echo '
                     <div class="m_korzina">
-                        <table width="100%" cellpadding="0" cellspacing="0" class="caborder2" >
+                        <table width="100%" cellspacing="0" class="caborder2" >
                         <tr>
 				<td colspan="4" height="20">
 				&nbsp;
