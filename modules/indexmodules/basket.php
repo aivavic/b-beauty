@@ -123,7 +123,7 @@
             </div>
             <p>Поля помеченые <span style="color: #ff0000;">*</span> обязательны для заполнения</p>
 
-            <input class="button-link-pull" type="submit" value="Оформить заказ" name=""/>
+            <input class="button-link-pull" type="submit" value="Оформить заказ" name="order"/>
         </form>
     <?php } ?>
 </div>
