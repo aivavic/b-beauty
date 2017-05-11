@@ -155,7 +155,7 @@ get_header( 'wp-activate' );
 	?>
 	</div>
 </div>
-<script type="text/javascript">
+<script>
 	var key_input = document.getElementById('key');
 	key_input && key_input.focus();
 </script>

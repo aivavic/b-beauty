@@ -55,14 +55,6 @@ a {
   }
 }
 
-input {
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  &:focus {
-    outline-color: $color-border-hover;
-  }
-}
-
 p {
   color: #646464;
   strong {

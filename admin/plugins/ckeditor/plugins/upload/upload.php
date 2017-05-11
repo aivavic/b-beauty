@@ -18,5 +18,5 @@
      
     $full_path = '/userfiles/'.$file_Name;
 	
-    echo '<script type="text/javascript">window.parent.CKEDITOR.tools.callFunction("'.$callback.'", "'.$full_path.'","Файл загружен" );</script>';
+    echo '<script>window.parent.CKEDITOR.tools.callFunction("'.$callback.'", "'.$full_path.'","Файл загружен" );</script>';
 ?>

@@ -15,7 +15,7 @@
 				<div style="color:red; font-weight:bold;"><?= $item['message']; ?></div><br/>
 		<form method="post" action="/work.php">
 				<input type="hidden" name="act" value="remind">
-				<table cellpadding="0" cellspacing="0">
+				<table>
 				<tr>
 						<td>Логин(email):</td><td><input type="text" value="" name="email" onfocus="if(this.value=='Логин') this.value='';"></td>
 				</tr>

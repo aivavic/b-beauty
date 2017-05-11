@@ -1,50 +1,110 @@
 BODY {
-	FONT-SIZE: 11px; MARGIN: 15px; COLOR: #000000; FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif; BACKGROUND-COLOR: #dedede
+    FONT-SIZE: 11px;
+    MARGIN: 15px;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif;
+    BACKGROUND-COLOR: #dedede
 }
+
 INPUT {
-	FONT-SIZE: 12px; FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif; HEIGHT: 21px
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif;
+    HEIGHT: 21px;
 }
+
 TABLE {
-	FONT-SIZE: 11px; FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Tahoma, Arial, Verdana, sans-serif;
+    border: 1px solid #c7c7c7;
 }
+
+.width95 {
+    /*border="0" cellpadding="3" cellspacing="3" width="95%"*/
+    width: 95%;
+}
+
+.caborder1 {
+    width: 99%;
+}
+
 .t3 A {
-	DISPLAY: block; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none
+    DISPLAY: block;
+    FONT-WEIGHT: bold;
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
 }
+
 .t3 A:hover {
-	DISPLAY: block; FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: underline
+    DISPLAY: block;
+    FONT-WEIGHT: bold;
+    COLOR: #ffffff;
+    TEXT-DECORATION: underline
 }
+
 A {
-	COLOR: #000000; TEXT-DECORATION: none
+    COLOR: #000000;
+    TEXT-DECORATION: none
 }
+
 A:hover {
-	COLOR: #000000; TEXT-DECORATION: underline
+    COLOR: #000000;
+    TEXT-DECORATION: underline
 }
+
 .t4 {
-	BORDER-RIGHT: #5c7d88 1px solid; BORDER-LEFT: #5c7d88 1px solid; BORDER-BOTTOM: #345560 1px solid
+    BORDER-RIGHT: #5c7d88 1px solid;
+    BORDER-LEFT: #5c7d88 1px solid;
+    BORDER-BOTTOM: #345560 1px solid
 }
+
 .t41 {
-	PADDING-LEFT: 15px; BACKGROUND-IMAGE: url(images/bt22.jpg); BORDER-BOTTOM: #5c7d88 1px solid
+    PADDING-LEFT: 15px;
+    BACKGROUND-IMAGE: url(images/bt22.jpg);
+    BORDER-BOTTOM: #5c7d88 1px solid
 }
+
 .col {
-	BORDER-RIGHT: #cac1b0 1px solid; BORDER-TOP: #cac1b0 1px solid; FLOAT: left; PADDING-BOTTOM: 8px; BORDER-LEFT: #cac1b0 1px solid; WIDTH: 20px; MARGIN-RIGHT: 8px; BORDER-BOTTOM: #cac1b0 1px solid
+    BORDER-RIGHT: #cac1b0 1px solid;
+    BORDER-TOP: #cac1b0 1px solid;
+    FLOAT: left;
+    PADDING-BOTTOM: 8px;
+    BORDER-LEFT: #cac1b0 1px solid;
+    WIDTH: 20px;
+    MARGIN-RIGHT: 8px;
+    BORDER-BOTTOM: #cac1b0 1px solid
 }
+
 .border {
-	BORDER-RIGHT: red 2px solid; BORDER-TOP: red 2px solid; BORDER-LEFT: red 2px solid; BORDER-BOTTOM: red 2px solid
+    BORDER-RIGHT: red 2px solid;
+    BORDER-TOP: red 2px solid;
+    BORDER-LEFT: red 2px solid;
+    BORDER-BOTTOM: red 2px solid
 }
+
 A.des:link {
-	COLOR: #000000; TEXT-DECORATION: underline
+    COLOR: #000000;
+    TEXT-DECORATION: underline
 }
+
 A.des:active {
-	COLOR: #000000; TEXT-DECORATION: underline
+    COLOR: #000000;
+    TEXT-DECORATION: underline
 }
+
 A.des:visited {
-	COLOR: #000000; TEXT-DECORATION: underline
+    COLOR: #000000;
+    TEXT-DECORATION: underline
 }
+
 A.des:hover {
-	COLOR: #000000; TEXT-DECORATION: none
+    COLOR: #000000;
+    TEXT-DECORATION: none
 }
 
+.adminpager .on {
+    font-weight: bold;
+}
 
-.adminpager .on{
-	font-weight:bold;
+colgroup col {
+    width: 120px;
 }
