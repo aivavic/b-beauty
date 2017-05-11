@@ -174,7 +174,7 @@ exit;
 	{
 		global $widtharr;
 
-		$s = '<table border="1" bordercolor="#c7c7c7">';
+		$s = '<table>';
 		for($i=0;$i<=100;$i++)
 		{
 			$s.='<tr>';

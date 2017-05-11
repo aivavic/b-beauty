@@ -15,8 +15,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 	<h1 class="samples">
 		CKEditor &mdash; Posted Data
 	</h1>
-	<table border="1" cellspacing="0" id="outputSample">
-		<colgroup><col width="120"></colgroup>
+	<table id="outputSample">
+		<colgroup><col></colgroup>
 		<thead>
 			<tr>
 				<th>Field&nbsp;Name</th>

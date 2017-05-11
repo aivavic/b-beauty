@@ -47,18 +47,18 @@
     <link href="/utils/jsz/jalerts/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen"/>
 
     <script src="/js/jquery-1.10.0.min.js"></script>
-    <script src="/js/jquery.jcarousel.js" type="text/javascript"></script>
-    <script src="/js/jcarousel.basic.js" type="text/javascript"></script>
-    <script src="/js/jquery.anythingslider.js" type="text/javascript"></script>
-    <script src="/fancybox/jquery.fancybox.js" type="text/javascript"></script>
-    <script src="/js/selectivizr-min.js" type="text/javascript"></script>
-    <script src="/js/jquery.watermark.js" type="text/javascript"></script>
-    <script src="/js/jquery.jnice.js" type="text/javascript"></script>
-    <script src="/js/scr.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/utils/jsz/utils/zendoutils.js"></script>
-    <script src="/utils/jsz/jalerts/jquery.ui.draggable.js" type="text/javascript"></script>
-    <script src="/utils/jsz/jalerts/jquery.alerts.js" type="text/javascript"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="/js/jquery.jcarousel.js" ></script>
+    <script src="/js/jcarousel.basic.js" ></script>
+    <script src="/js/jquery.anythingslider.js" ></script>
+    <script src="/fancybox/jquery.fancybox.js" ></script>
+    <script src="/js/selectivizr-min.js" ></script>
+    <script src="/js/jquery.watermark.js" ></script>
+    <script src="/js/jquery.jnice.js" ></script>
+    <script src="/js/scr.js"></script>
+    <script src="/utils/jsz/utils/zendoutils.js"></script>
+    <script src="/utils/jsz/jalerts/jquery.ui.draggable.js" ></script>
+    <script src="/utils/jsz/jalerts/jquery.alerts.js" ></script>
+    <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <!--[if lt IE 9]>
     <script>
         document.createElement('header');
@@ -69,7 +69,7 @@
         document.createElement('footer');
         document.createElement('time');
     </script>
-    <script src="/js/pie.js" type="text/javascript"></script>
+    <script src="/js/pie.js"></script>
     <![endif]-->
 
     <!--[if lt IE 7]>
@@ -81,8 +81,8 @@
         var sdelay =<?= $varsline['delay']?>
     </script>
     <!-- Put this script tag to the <head> of your page -->
-    <script type="text/javascript" src="//vk.com/js/api/openapi.js?101"></script>
-    <script type="text/javascript">
+    <script src="//vk.com/js/api/openapi.js?101"></script>
+    <script>
         VK.init({apiId: 4394229, onlyWidgets: true});
     </script>
     <script>
