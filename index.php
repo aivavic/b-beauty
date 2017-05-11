@@ -125,6 +125,6 @@ include "modules/indexmodules/footer.php";
     })(document, window, "yandex_metrika_callbacks");
 </script>
 <noscript>
-    <div><img src="//mc.yandex.ru/watch/28154346" style="position:absolute; left:-9999px;" alt=""/></div>
+    <div><img src="//mc.yandex.ru/watch/28154346" style="position:absolute; left:-9999px;" alt="img"/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->

@@ -59,7 +59,7 @@
 				if($v2=='editform')
 				{
 					$ret = 	'
-					<table border="0" cellpadding="3" cellspacing="3" width="95%"><tbody>';
+					<table class="width95"><tbody>';
 
 				}
 			}

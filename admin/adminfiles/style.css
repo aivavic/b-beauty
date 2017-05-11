@@ -18,6 +18,15 @@ TABLE {
     border: 1px solid #c7c7c7;
 }
 
+.width95 {
+    /*border="0" cellpadding="3" cellspacing="3" width="95%"*/
+    width: 95%;
+}
+
+.caborder1 {
+    width: 99%;
+}
+
 .t3 A {
     DISPLAY: block;
     FONT-WEIGHT: bold;

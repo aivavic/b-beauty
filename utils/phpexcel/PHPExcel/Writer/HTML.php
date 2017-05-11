@@ -1026,9 +1026,9 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
 				$this->_assembleCSS($this->_cssStyles['table']) : '';
 
 			if ($this->_isPdf && $pSheet->getShowGridLines()) {
-				$html .= '	<table id="sheet' . $sheetIndex . '" cellspacing="1" style="' . $style . '">' . PHP_EOL;
+				$html .= '	<table id="sheet' . $sheetIndex . '" style="' . $style . '">' . PHP_EOL;
 			} else {
-				$html .= '	<table id="sheet' . $sheetIndex . '" cellspacing="0" style="' . $style . '">' . PHP_EOL;
+				$html .= '	<table id="sheet' . $sheetIndex . '" style="' . $style . '">' . PHP_EOL;
 			}
 		}
 

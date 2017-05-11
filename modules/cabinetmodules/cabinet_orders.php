@@ -23,7 +23,7 @@
                 while($line = mysql_fetch_array($res,MYSQL_ASSOC))
                 {
                     $k++;
-                    echo '<table cellSpacing="1" cellPadding="3" width="99%"  border="0" class="caborder1" >
+                    echo '<table class="caborder1" >
                     <tr>
                     <td align="center" ><b>Номер заказа</b></td>
                     <td align="center" ><b>Дата</b></td>
