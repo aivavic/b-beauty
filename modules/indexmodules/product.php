@@ -139,7 +139,7 @@ $product_info = $_logic['product'];
         <div class="product-description">
             <h2>Описание товара</h2>
 
-            <p><?= $product_info['text'] ?></p>
+            <?= $product_info['text'] ?>
         </div>
     </div>
 

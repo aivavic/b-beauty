@@ -66,13 +66,15 @@
                                                 </td>
                                                 <td>
                                                     <a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>">
-                                                        <img src="<?= $fname; ?>" <?= $addstr ?> alt="<?= htmlspecialchars($line['title']) ?>"/>
+                                                        <img src="<?= $fname; ?>" <?= $addstr ?>
+                                                             alt="<?= htmlspecialchars($line['title']) ?>"/>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"
                                                        class="cart-product-name"><?= htmlspecialchars($line['title']); ?><?= " " . $brand; ?></a>
-                                                    <p class="cart-product-article">Артикул: <?= htmlspecialchars($artikul) ?></p>
+                                                    <p class="cart-product-article">
+                                                        Артикул: <?= htmlspecialchars($artikul) ?></p>
                                                 </td>
                                                 <td>
                                                     <p class="mysize_<?= $key ?>"><?= $value['size'] ?></p>
@@ -96,6 +98,7 @@
                         }
 
                         ?>
+                    </div>
                 </form>
             </div>
             <p class="product-total-count">Всего к оплате: <span><?= PriceToStr($allsum) ?> грн</span></p>
