@@ -1,0 +1,9 @@
+.catalog-filter {
+  @extend .flex;
+  padding-bottom: 20px;
+  .sort-method {
+    a {
+      color: $color-border-hover;
+    }
+  }
+}
