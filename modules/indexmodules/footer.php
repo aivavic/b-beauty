@@ -11,11 +11,9 @@
         удобный крой одежды,использование качественных, современных материалов и ярких трендовых цветов. Мы с
         радостью поможем вам в выборе удобной и модной одежды для вашего ребенка.</p>
 </div>
-
 <footer>
     <div class="menu">
         <div class="container">
-
             <ul class="nav-list">
                 <li><a class="title-sub-menu" href="/cat/44">Для девочек</a>
                     <ul class="sub-menu">
@@ -68,7 +66,6 @@
                     </ul>
                 </li>
             </ul>
-
             <ul class="contacts">
                 <li>
                     <span class="title-sub-menu">Контакты</span>
@@ -82,14 +79,12 @@
                     <span>29000, г. Хмельницкий, ул. Камянецкая 52,</span>
                 </li>
             </ul>
-
             <div class="payment">
                 <span class="title-sub-menu">Спсобы оплаты</span>
                 <div class="payment-img">
                     <img src="/images/master-cart.png" alt="alt">
                     <img src="/images/visa.png" alt="alt">
                 </div>
-
                 <p>Вы можете оплатить покупки
                     наличными при получении, либо
                     выбрать <a href="#">другой способ оплаты.</a></p>
@@ -101,7 +96,6 @@
             <p class="copyright">
                 <?= $varsline['f_text'] ?>. All rights reserved. Redesign and technical support by <a href="http://nbweb.pro/">NbWeb</a>
             </p>
-
             <ul class="social-links">
                 <li>Присоединяйтесь:</li>
                 <li><a href="#"><img src="/images/fb.png" alt="img"></a></li>
@@ -111,23 +105,11 @@
         </div>
     </div>
 </footer>
-
-
-<!-- fancybox wrappers -->
 <div class="fancybox-wrapper">
-
-    <!-- size table -->
     <div id="size-table">
-        <div class="ctext">
-            <?= $varsline['sizetable']?>
-        </div>
+        <div class="ctext"><?= $varsline['sizetable']?></div>
     </div>
-    <!-- end size table -->
-
-
-    <!-- product add -->
     <div id="product-add">
-
         <div class="product-add-heading">У вас в корзине <span class="basketnum"> <?= $_logic['headerarr']['basket_num']?> </span> <span class="baskettovarov"><?= $_logic['headerarr']['basket_tovarov']?></span>.</div>
         <div id="product-add2">
             <div class="cart-product-item">
@@ -141,11 +123,9 @@
                         </td>
                         <td class="cart-product-size"><div>XL</div></td>
                         <td class="cart-product-price"><div>129 грн</div></td>
-
                     </tr>
                 </table>
             </div>
-
             <div class="cart-product-item">
                 <table>
                     <tr>
@@ -157,7 +137,6 @@
                         </td>
                         <td class="cart-product-size"><div>XL</div></td>
                         <td class="cart-product-price"><div>129 грн</div></td>
-
                     </tr>
                 </table>
             </div>
@@ -166,13 +145,11 @@
             <div class="product-add-exit">
                 <a href="#" class="arrow-left button-link"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Продолжить покупки</a>
             </div>
-
             <div class="product-add-orderbutton">
                 <a href="/basket" class="button-orange button-link-pull"><span class="button-orange-title">Оформить заказ <i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
         </div>
     </div>
-    <!-- end product add -->
 </div>
 <link href="/css/font-awesome.min.css?4.0.7" rel='stylesheet'>
 </body>

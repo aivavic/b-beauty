@@ -18,7 +18,7 @@ IndexIgnore *
 
 ErrorDocument 404 /404.php
 
-<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf|ttf)$">
   Header set Cache-Control "max-age=2592000"
 </FilesMatch>
 
