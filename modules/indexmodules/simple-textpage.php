@@ -1,3 +1,4 @@
+<div class="container">
 <?
 $menuitem = $_logic['pageitem'];
 ?>
@@ -6,4 +7,11 @@ $menuitem = $_logic['pageitem'];
 		
 <div class="plain-textpage ctext">
 <?=$menuitem['text']?>
-</div>	
+</div>
+</div>
+<!-- /.container -->
+
+
+
+
+

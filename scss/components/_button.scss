@@ -10,8 +10,25 @@
   transition: 0.3s all;
   text-align: center;
   margin: 10px 0;
+  background-color: #fff;
+  cursor: pointer;
+  i {
+    font-size: 10px;
+    margin: 0 5px;
+  }
+
   &:hover {
     color: #fff;
     background-color: $color-border-hover;
+  }
+}
+
+.button-link-pull {
+  @extend .button-link;
+  color: #fff;
+  background-color: $color-border-hover;
+  &:hover {
+    color: $color-border-hover;
+    background-color: #fff;
   }
 }

@@ -10,11 +10,18 @@
   }
 }
 
+br {
+  content: "";
+  &:after {
+    content: "\00a0" !important;
+  }
+}
+
 body {
   border-top: 3px solid #f8b910;
   font-size: $main-font-size;
   line-height: $main-line-height;
-  font-family: 'OpenSans',sans-serif;
+  font-family: 'OpenSans', sans-serif;
   @include breakpoint(extra-large) {
     width: 1349px;
   }
@@ -22,9 +29,6 @@ body {
   @include breakpoint(till-extra-large) {
     width: 100%;
   }
-
-  br {content: ""}
-  br:after {content: "\00a0"}
 }
 
 h1, h3 {
@@ -51,12 +55,20 @@ a {
   }
 }
 
+input {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  &:focus {
+    outline-color: $color-border-hover;
+  }
+}
+
 p {
   color: #646464;
   strong {
     font-weight: bold;
   }
-  
+
   a {
     color: $color-border-hover;
   }
