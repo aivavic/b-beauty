@@ -237,7 +237,7 @@ function login_footer($input_id = '') {
 	</div>
 
 	<?php if ( !empty($input_id) ) : ?>
-	<script type="text/javascript">
+	<script>
 	try{document.getElementById('<?php echo $input_id; ?>').focus();}catch(e){}
 	if(typeof wpOnload=='function')wpOnload();
 	</script>
@@ -263,7 +263,7 @@ function wp_shake_js() {
 	if ( wp_is_mobile() )
 		return;
 ?>
-<script type="text/javascript">
+<script>
 addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
 function s(id,pos){g(id).left=pos+'px';}
 function g(id){return document.getElementById(id).style;}
@@ -828,7 +828,7 @@ default:
 			/** This action is documented in wp-login.php */
 			do_action( 'login_footer' ); ?>
 			<?php if ( $customize_login ) : ?>
-				<script type="text/javascript">setTimeout( function(){ new wp.customize.Messenger({ url: '<?php echo wp_customize_url(); ?>', channel: 'login' }).send('login') }, 1000 );</script>
+				<script>setTimeout( function(){ new wp.customize.Messenger({ url: '<?php echo wp_customize_url(); ?>', channel: 'login' }).send('login') }, 1000 );</script>
 			<?php endif; ?>
 			</body></html>
 <?php		exit;
@@ -948,7 +948,7 @@ default:
 </p>
 <?php } ?>
 
-<script type="text/javascript">
+<script>
 function wp_attempt_focus(){
 setTimeout( function(){ try{
 <?php if ( $user_login ) { ?>

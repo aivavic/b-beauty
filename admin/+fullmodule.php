@@ -495,7 +495,7 @@
 			else if($field_value['visualtype']=='color')
 			{
 				$r2.= '
-					<script type="text/javascript">        
+					<script>        
 					  $(document).ready(
 					    function()
 					    {

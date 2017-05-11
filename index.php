@@ -95,7 +95,7 @@ if ($act == "cat" || $act == "none") {
 include "modules/indexmodules/footer.php";
 ?>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
+<script>
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function () {
             try {
