@@ -66,9 +66,9 @@ $product_info = $_logic['product'];
                     <span class="product-price-currency"><?= $product_info['price_valuta'] ?></span>
                     <span class="product-old-price">
                     <? if ($product_info['priceold'] > 0) { ?>
-                        <del>
+
                             <?= $product_info['priceoldstr'] . " " . $product_info['price_valuta'] ?>
-                        </del>
+
                     <? } ?>
 
                     </span>

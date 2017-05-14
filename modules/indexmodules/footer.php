@@ -87,7 +87,7 @@
                 </div>
                 <p>Вы можете оплатить покупки
                     наличными при получении, либо
-                    выбрать <a href="#">другой способ оплаты.</a></p>
+                    выбрать <a href="/paydeliver">другой способ оплаты.</a></p>
             </div>
         </div>
     </div>
@@ -98,9 +98,9 @@
             </p>
             <ul class="social-links">
                 <li>Присоединяйтесь:</li>
-                <li><a href="#"><img src="/images/fb.png" alt="img"></a></li>
-                <li><a href="#"><img src="/images/ig.png" alt="img"></a></li>
-                <li><a href="#"><img src="/images/vk.png" alt="img"></a></li>
+                <li><a href="http://facebook.com"><img src="/images/fb.png" alt="img"></a></li>
+                <li><a href="http://instagram.com"><img src="/images/ig.png" alt="img"></a></li>
+                <li><a href="http://vk.com"><img src="/images/vk.png" alt="img"></a></li>
             </ul>
         </div>
     </div>

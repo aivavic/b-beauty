@@ -82,15 +82,15 @@ if ($act == "addtobasket") {
                                 <a onclick="delbacket(<?= $key; ?>)" href="#"><i class="fa fa-trash"
                                                                                  aria-hidden="true"></i></a>
                             </td>
-                            <td><a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"><img
+                            <td class="img"><a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"><img
                                             src="<?= $fname; ?>" <?= $addstr ?>
                                             alt="<?= htmlspecialchars($line['title']) ?>"/></a></td>
-                            <td>
+                            <td class="description">
                                 <a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"
                                    class="cart-product-name"><?= htmlspecialchars($line['title']) ?> <?= htmlspecialchars($product['brand_name']) ?></a>
                                 <p>Артикул: <?= $line['artikul'] ?></p>
                             </td>
-                            <td><p><?= $value['size'] ?></p></td>
+                            <td class="size"><p><?= $value['size'] ?></p></td>
 
                             <td class="product-price"><p><?= PriceToStr($line['price']) ?></p></td>
                         </tr>
@@ -178,17 +178,17 @@ if ($act == "delbacket") {
                         <td class="close">
                             <a onclick="delbacket(<?= $key; ?>)" href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
-                        <td>
+                        <td class="img">
                             <a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"><img
                                         src="<?= $fname; ?>" <?= $addstr ?>
                                         alt="<?= htmlspecialchars($line['title']) ?>"/></a>
                         </td>
-                        <td>
+                        <td class="description">
                             <a href="<?= GetSeoUrl('tovar', $line['id'], $line) ?>"
                                class="cart-product-name"><?= htmlspecialchars($line['title']) ?> <?= htmlspecialchars($product['brand_name']) ?></a>
                             <p>Артикул: <?= $line['artikul'] ?></p>
                         </td>
-                        <td>
+                        <td class="size">
                             <p><?= $value['size'] ?></p>
                         </td>
 

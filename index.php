@@ -7,6 +7,7 @@ if (isset($_SESSION['logdebug']) && $_SESSION['logdebug'] == 1) {
 } else {
     error_reporting(E_ERROR);
 }
+error_reporting(0);
 
 include "headerinc.php";
 include "_logic.php";

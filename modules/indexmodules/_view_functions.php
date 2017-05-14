@@ -8,11 +8,12 @@ function PrintProductBlock($product)
         <a class="product-name" href="<?= $product['url'] ?>"><?= $product['title'] ?></a>
         <p class="product-brand">Производитель: <?= $product['brand_name'] ?></p>
         <p class="price">
-<span class="old-price"><del>
+<span class="old-price">
+
 <? if ($product['priceold'] > 0) { ?>
     <?= $product['priceoldstr'] . ' ' . $product['price_valuta']; ?>
 <? } ?>
-        </del>
+
 </span>
             <span class="actual-price"><?= $product['pricestr'] . ' ' . $product['price_valuta']; ?></span>
         </p>

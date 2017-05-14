@@ -83,3 +83,12 @@ img {
     padding: 0 15px;
   }
 }
+.textbox{
+  width: 1010px;
+  margin: auto;
+  padding: 0 15px;
+  @include breakpoint (extra-small) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

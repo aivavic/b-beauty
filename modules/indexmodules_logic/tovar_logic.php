@@ -8,10 +8,9 @@
             $_logic['product']  = LangProcess(GetProductInfo($tovarline['id'],$tovarline,Array('allfotos'=>true)));
             $_logic['product']['line']['razmer'] = explode(";",$_logic['product']['line']['razmer']);
 	    //debug($_logic['product']);
-            
-            $similarproducts_number = 3; //количество похожих товаров на странице
+
             $products = Array();
-            $sql = "SELECT * FROM $par->objectstable WHERE categid=".$tovarline['categid']." AND hide=0 ORDER BY RAND() LIMIT 0,$similarproducts_number ";
+            $sql = "SELECT * FROM $par->objectstable WHERE categid=".$tovarline['categid']." AND hide=0 ORDER BY RAND() ";
             $res = mysql_query($sql);
             while($line = mysql_fetch_array($res,MYSQL_ASSOC))
             {

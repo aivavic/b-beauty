@@ -13,50 +13,50 @@
                 <form method="post" action="/work.php" id="basketform" name="basketform">
                     <input type="hidden" name="act" value="changebasket">
                     <div class="cart-products">
-                        <?
-                        debug($_SESSION['basket']);
-                        $allsum = 0;
-                        $k = 0;
-                        if (isset($_SESSION['basket'])) {
-                            foreach ($_SESSION['basket'] AS $key => $value) {
-                                if ($value['count'] > 0) {
-                                    $k++;
-                                    $kid = $value['id'];
-                                    $sql = "SELECT * FROM $par->objectstable WHERE id=$kid";
-                                    $res = mysql_query($sql);
-                                    $line = mysql_fetch_array($res, MYSQL_ASSOC);
-                                    $fname = 'utils/images_z/nofoto.png';
-                                    $sqltmp = "SELECT * FROM $par->fotorobjtable WHERE reportid=" . $line['id'] . " AND hide=0 ORDER BY prior LIMIT 0,1";
-                                    $restmp = mysql_query($sqltmp);
+                        <div class="cart-product-item">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Назавние</th>
+                                    <th>Размер</th>
+                                    <th>Количество</th>
+                                    <th>Цена</th>
+                                </tr>
+                                </thead>
+                                <?
+                                debug($_SESSION['basket']);
+                                $allsum = 0;
+                                $k = 0;
+                                if (isset($_SESSION['basket'])) {
+                                    foreach ($_SESSION['basket'] AS $key => $value) {
+                                        if ($value['count'] > 0) {
+                                            $k++;
+                                            $kid = $value['id'];
+                                            $sql = "SELECT * FROM $par->objectstable WHERE id=$kid";
+                                            $res = mysql_query($sql);
+                                            $line = mysql_fetch_array($res, MYSQL_ASSOC);
+                                            $fname = 'utils/images_z/nofoto.png';
+                                            $sqltmp = "SELECT * FROM $par->fotorobjtable WHERE reportid=" . $line['id'] . " AND hide=0 ORDER BY prior LIMIT 0,1";
+                                            $restmp = mysql_query($sqltmp);
 
-                                    if ($linetmp = mysql_fetch_array($restmp, MYSQL_ASSOC)) {
-                                        if (is_file('fotos/object_sm' . $linetmp['id'] . '.jpg')) {
-                                            $fname = 'fotos/object_sm' . $linetmp['id'] . '.jpg';
-                                        }
-                                    }
+                                            if ($linetmp = mysql_fetch_array($restmp, MYSQL_ASSOC)) {
+                                                if (is_file('fotos/object_sm' . $linetmp['id'] . '.jpg')) {
+                                                    $fname = 'fotos/object_sm' . $linetmp['id'] . '.jpg';
+                                                }
+                                            }
 
-                                    $product = GetProductInfo($value['id']);
+                                            $product = GetProductInfo($value['id']);
 
-                                    $fname = $product['fname'];
-                                    $brand = htmlspecialchars($product['brand_name']);
-                                    $artikul = $product['artikul'];
-                                    $addstr = '';
-                                    if ($fname != '') {
-                                        $addstr = GetAddStr(138, 138, $fname);
-                                    }
-                                    ?>
-                                    <div class="cart-product-item">
-                                        <table>
-                                            <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Назавние</th>
-                                                <th>Размер</th>
-                                                <th>Количество</th>
-                                                <th>Цена</th>
-                                            </tr>
-                                            </thead>
+                                            $fname = $product['fname'];
+                                            $brand = htmlspecialchars($product['brand_name']);
+                                            $artikul = $product['artikul'];
+                                            $addstr = '';
+                                            if ($fname != '') {
+                                                $addstr = GetAddStr(138, 138, $fname);
+                                            }
+                                            ?>
                                             <tbody>
                                             <tr>
                                                 <td class="close">
@@ -88,29 +88,29 @@
                                                 </td>
                                             </tr>
                                             </tbody>
-                                        </table>
-                                    </div>
-                                    <?
-                                    $allsum += $line['price'] * $value['count'];
-                                    $_SESSION['allsum'] = $allsum;
+                                            <?
+                                            $allsum += $line['price'] * $value['count'];
+                                            $_SESSION['allsum'] = $allsum;
+                                        }
+                                    }
                                 }
-                            }
-                        }
 
-                        ?>
+                                ?>
+                            </table>
+                        </div>
                     </div>
                 </form>
             </div>
             <p class="product-total-count">Всего к оплате: <span><?= PriceToStr($allsum) ?> грн</span></p>
             <?
-            if (isset($_REQUEST['sentcode']) && $_REQUEST['sentcode'] == 1)
+            if (isset($_REQUEST['sentcode']) && $_REQUEST['sentcode'] == 1) {
                 echo '<script> jAlert(\'Ваш заказ отправлен.\', \'Уважаемый покупатель\'); </script>';
+            }
         } ?>
 
         <form id="form1" class="cart-privatinfo" action="/work.php" method="post" name="form1">
             <input type="hidden" name="act" value="order">
             <div class="cart-privatinfo-rows">
-                <p class="title">Обратная связь: </p>
                 <div class="cart-privatinfo-row required">
                     <input type="text" name="name" id="name" required="required" placeholder="Ваше имя"/>
                 </div>
@@ -121,7 +121,6 @@
                     <input type="text" name="email" id="email" placeholder="E-mail"/>
                 </div>
             </div>
-            <p>Поля помеченые <span style="color: #ff0000;">*</span> обязательны для заполнения</p>
 
             <input class="button-link-pull" type="submit" value="Оформить заказ" name="order"/>
         </form>
