@@ -181,6 +181,13 @@ $(document).ready(function() {
         nextArrow: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
         prevArrow: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>',
     });
+
+    $('.similar .products-wrapper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+        prevArrow: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>',
+    });
 });
 
 $(window).load(function() {
