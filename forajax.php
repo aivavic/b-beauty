@@ -49,7 +49,7 @@ if ($act == "addtobasket") {
             $x = $value['count'];
 
             while ($x > 0) {
-                $k++;
+
                 $kid = $value['id'];
                 $sql = "SELECT * FROM $par->objectstable WHERE id=$kid";
                 $res = mysql_query($sql);
@@ -99,7 +99,7 @@ if ($act == "addtobasket") {
                 </div>
                 <?
 
-                $allsum += $line['price'] * $value['count'];
+//                $allsum += $line['price'] * $value['count'];
             }
         }
 
@@ -145,7 +145,6 @@ if ($act == "delbacket") {
         $x = $value['count'];
 
         while ($x > 0) {
-            $k++;
             $kid = $value['id'];
             $sql = "SELECT * FROM $par->objectstable WHERE id=$kid";
             $res = mysql_query($sql);
