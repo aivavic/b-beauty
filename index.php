@@ -47,6 +47,7 @@ if ($act == "cat" || $act == "bestsellers" || $act == "akcii") {
 if ($act == "search") {
     include "modules/indexmodules_logic/bread_logic.php";
     include "modules/indexmodules_logic/cat_logic.php";
+    include "modules/indexmodules/aside.php";
     include "modules/indexmodules/catalog.php";
 }
 
